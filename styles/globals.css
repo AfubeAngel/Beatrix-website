@@ -5,11 +5,7 @@
   --color-primary-light: #E3EDDA;
   --color-primary-lighter: #F2F7EE;
 
-  --color-secondary: #A0AEC0;
-  --color-secondary-light: #CBD5E0;
-  --color-secondary-dark: #718096;
-
-  --color-text-gray100: #6D6D6D;
+  --color-text-default: #6D6D6D;
   --color-text-link: #0287F0;
 }
 
@@ -27,11 +23,8 @@
 .text-primary-main {
   color: var(--color-primary-main);
 }
-.text-secondary {
-  color: var(--color-secondary);
-}
-.text-gray-100 {
-  color: var(--color-text-gray100);
+.text-default {
+  color: var(--color-text-default);
 }
 .text-link {
   color: var(--color-text-link);

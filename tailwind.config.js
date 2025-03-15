@@ -9,13 +9,8 @@ module.exports = {
             lighter: "#F2F7EE", 
           },
           text:{
-            gray100: "#6D6D6D",
+            default: "#6D6D6D",
             link: "#0287F0"
-          },
-          secondary: {
-            DEFAULT: "#A0AEC0", 
-            light: "#CBD5E0", 
-            dark: "#718096", 
           },
         },
       },
