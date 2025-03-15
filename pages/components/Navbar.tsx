@@ -39,7 +39,7 @@ const Navbar = () => {
             >
               Resources
             </Link>
-            <Link href="#blog" className="text-default hover:text-green-700">
+            <Link href="/blog" className="text-default hover:text-green-700">
               Blog
             </Link>
             <button
@@ -95,7 +95,7 @@ const Navbar = () => {
                 Resources
               </Link>
               <Link
-                href="#blog"
+                href="/blog"
                 className="block text-gray-700 hover:text-green-700"
               >
                 Blog
