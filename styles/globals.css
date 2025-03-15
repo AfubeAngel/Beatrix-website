@@ -9,6 +9,10 @@
   --color-text-link: #0287F0;
 }
 
+body {
+  background-color: "#E7E7E7";
+}
+
 /* Utility classes (optional) */
 .bg-primary-main {
   background-color: var(--color-primary-main);

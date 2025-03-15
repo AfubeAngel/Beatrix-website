@@ -1,5 +1,8 @@
 // import Image from "next/image";
 // import { Geist, Geist_Mono } from "next/font/google";
+
+import About from "./components/home/about";
+import Approach from "./components/home/approach/approach";
 import Hero from "./components/home/hero";
 import SubHero from "./components/home/sub-hero";
 import Navbar from "./components/Navbar";
@@ -20,6 +23,8 @@ export default function Home() {
       <Navbar />
       <Hero />
       <SubHero />
+      <About />
+      <Approach />
     </div>
   );
 }

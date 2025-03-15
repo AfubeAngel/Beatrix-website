@@ -1,10 +1,10 @@
 const SubHero = () => {
   return (
-    <div className="bg-green-400 text-center py-[53px] px-[150px] ">
-      <p>
-        I look at how all areas of your life are connected, your relationships,
+    <div className="bg-primary-light flex justify-center text-center py-[53px]">
+      <p className="font-normal text-sm lg:text-[32px] max-w-[328px] lg:max-w-[1135px] ">
+        &quot;I look at how all areas of your life are connected, your relationships,
         career, and daily habits and guide you to make informed health and
-        wellness decisions.
+        wellness decisions.&quot;
       </p>
     </div>
   );
