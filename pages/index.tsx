@@ -3,6 +3,7 @@
 
 import About from "./components/home/about";
 import Approach from "./components/home/approach/approach";
+import Explore from "./components/home/explore";
 import Hero from "./components/home/hero";
 import SubHero from "./components/home/sub-hero";
 import Navbar from "./components/Navbar";
@@ -25,6 +26,7 @@ export default function Home() {
       <SubHero />
       <About />
       <Approach />
+      <Explore />
     </div>
   );
 }
