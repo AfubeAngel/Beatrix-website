@@ -34,7 +34,7 @@ const Navbar = () => {
               About
             </Link>
             <Link
-              href="#resources"
+              href="/resources"
               className="text-default hover:text-green-700"
             >
               Resources
@@ -89,7 +89,7 @@ const Navbar = () => {
                 About
               </Link>
               <Link
-                href="#resources"
+                href="/resources"
                 className="block text-gray-700 hover:text-green-700"
               >
                 Resources

@@ -2,6 +2,7 @@
 import BookConsultation from "./components/about/book-consultation";
 import Hero from "./components/about/Hero";
 import Journey from "./components/about/journey";
+import Trainings from "./components/about/trainings";
 import Navbar from "./components/Navbar";
 
 export default function About() {
@@ -10,6 +11,7 @@ export default function About() {
       <Navbar />
       <Hero />
       <Journey />
+      <Trainings /> 
       <BookConsultation />
     </div>
   );

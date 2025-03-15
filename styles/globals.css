@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import '@splidejs/splide/css';
+
 
 :root {
   --color-primary-main: #53793C;
