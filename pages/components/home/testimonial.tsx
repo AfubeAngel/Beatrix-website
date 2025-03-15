@@ -7,9 +7,19 @@ const testimonials = [
     role: "Corporate Manager",
   },
   {
-    text: "This coaching experience has been different. I'm eating better, managing my stress, and feeling healthier than ever before.",
+    text: "This coaching experience has been different. I'm eating better, managing my stress, and feeling healthier than ever before. It's the most sustainable change I’ve ever made.",
     name: "Adebayo",
     role: "Teacher",
+  },
+  {
+    text: "The sessions have been a life-changer for me! I now have a structured approach to managing my time effectively.",
+    name: "Fatima",
+    role: "Entrepreneur",
+  },
+  {
+    text: "I have found new clarity in my personal and professional growth thanks to these coaching sessions.",
+    name: "Daniel",
+    role: "Software Engineer",
   },
 ];
 
@@ -28,24 +38,30 @@ export default function Testimonials() {
     <section className="py-12 px-6">
       <h2 className="text-2xl font-bold mb-6">What Our Clients Say</h2>
 
-      {/* Desktop View */}
-      <div className="hidden md:grid grid-cols-2 bg-primary-lighter p-6 rounded-lg">
-        {/* Left Side */}
-        <div className="pr-6 border-r border-gray-300">
-          <p className="text-lg italic">“{testimonials[0].text}”</p>
-          <p className="mt-4 font-bold">{testimonials[0].name}</p>
-          <p className="text-gray-500">{testimonials[0].role}</p>
+      {/* Desktop View - Shows Two Testimonials Side by Side */}
+      <div className="hidden md:flex bg-primary-lighter p-6 rounded-lg">
+        {/* Left Testimonial */}
+        <div className="w-1/2 pr-6 border-r border-gray-300">
+          <p className="text-lg italic">“{testimonials[index].text}”</p>
+          <p className="mt-4 font-bold">{testimonials[index].name}</p>
+          <p className="text-gray-500">{testimonials[index].role}</p>
         </div>
 
-        {/* Right Side */}
-        <div className="pl-6">
-          <p className="text-lg italic">“{testimonials[1].text}”</p>
-          <p className="mt-4 font-bold">{testimonials[1].name}</p>
-          <p className="text-gray-500">{testimonials[1].role}</p>
+        {/* Right Testimonial (Next Item in Array) */}
+        <div className="w-1/2 pl-6">
+          <p className="text-lg italic">
+            “{testimonials[(index + 1) % testimonials.length].text}”
+          </p>
+          <p className="mt-4 font-bold">
+            {testimonials[(index + 1) % testimonials.length].name}
+          </p>
+          <p className="text-gray-500">
+            {testimonials[(index + 1) % testimonials.length].role}
+          </p>
         </div>
       </div>
 
-      {/* Mobile View */}
+      {/* Mobile View - Shows One Testimonial with Arrows */}
       <div className="relative md:hidden bg-primary-lighter p-6 rounded-lg">
         <p className="text-lg italic">“{testimonials[index].text}”</p>
         <p className="mt-4 font-bold">{testimonials[index].name}</p>

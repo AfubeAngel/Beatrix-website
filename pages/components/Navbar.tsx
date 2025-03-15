@@ -30,7 +30,7 @@ const Navbar = () => {
             <Link href="/" className="text-default hover:text-primary-main ">
               Home
             </Link>
-            <Link href="#about" className="text-default hover:text-primary-main">
+            <Link href="/about" className="text-default hover:text-primary-main">
               About
             </Link>
             <Link
@@ -83,7 +83,7 @@ const Navbar = () => {
                 Home
               </Link>
               <Link
-                href="#about"
+                href="/about"
                 className="block text-gray-700 hover:text-green-700"
               >
                 About
