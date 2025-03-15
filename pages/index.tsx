@@ -3,9 +3,12 @@
 
 import About from "./components/home/about";
 import Approach from "./components/home/approach/approach";
+import BlogSection from "./components/home/blogSection";
 import Explore from "./components/home/explore";
+import SubFooter from "./components/home/footer-sub";
 import Hero from "./components/home/hero";
 import SubHero from "./components/home/sub-hero";
+import Testimonials from "./components/home/testimonial";
 import Navbar from "./components/Navbar";
 
 // const geistSans = Geist({
@@ -27,6 +30,9 @@ export default function Home() {
       <About />
       <Approach />
       <Explore />
+      <Testimonials />
+      <BlogSection />
+      <SubFooter />
     </div>
   );
 }

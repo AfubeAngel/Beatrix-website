@@ -29,7 +29,7 @@ const Footer = () => {
           {/* Right Side - Instagram Feed */}
           <div className="text-left md:text-right">
             <h4 className="font-semibold text-gray-900">Follow on Instagram</h4>
-            <div className="mt-4 grid grid-cols-2 gap-2 w-40 md:w-48 mx-auto md:ml-auto">
+            <div className="mt-4 grid grid-cols-2 gap-2 w-40 md:w-48 md:ml-auto">
               <div className="w-full h-16 bg-gray-200"></div>
               <div className="w-full h-16 bg-gray-200"></div>
               <div className="w-full h-16 bg-gray-200"></div>
