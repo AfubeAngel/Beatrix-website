@@ -61,7 +61,7 @@ const Navbar = () => {
 
       {/* Mobile Menu Overlay */}
       {isOpen && (
-        <div className="fixed inset-0 bg-opacity-100 flex justify-end">
+        <div className="fixed inset-0 z-[100] bg-opacity-100 flex justify-end">
           <div className="w-3/4 bg-white shadow-lg h-full p-6">
           <div className="flex justify-between mb-20 ">
           <h2 className="text-2xl font-semibold ">Menu</h2>

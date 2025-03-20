@@ -1,5 +1,5 @@
-
 import Image from "next/image";
+import Navbar from "./components/Navbar";
 
 const blogPosts = [
   {
@@ -51,40 +51,57 @@ const blogPosts = [
 
 export default function BlogPage() {
   return (
-    <section className="py-12 px-6 max-w-6xl mx-auto">
-      {/* Featured Blog Section */}
-      <div className="relative w-full h-[500px] flex flex-col justify-end p-8 bg-black/50 text-white rounded-lg overflow-hidden">
-        <Image
-          src="/images/featured-blog.jpg" // Replace with actual image
-          alt="Featured Blog"
-          layout="fill"
-          objectFit="cover"
-          className="-z-10 absolute inset-0"
-        />
-        <h1 className="text-4xl font-bold max-w-2xl">
-          How to Listen to Your Body: Understanding Hunger, Cravings & Fullness
-        </h1>
-        <p className="mt-2 max-w-xl">
-          Explore ways to improve your relationship with food and your body.
-        </p>
-        <a href="#" className="mt-4 bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition">
-          Read More
-        </a>
-      </div>
-
-      {/* Recent Blog Posts Section */}
-      <h2 className="text-3xl font-bold mt-12 mb-6">Recent Blog Posts</h2>
-
-      <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-8">
-        {blogPosts.map((post, index) => (
-          <a key={index} href={post.link} className="block bg-white shadow-lg rounded-lg overflow-hidden">
-            <Image src={post.image} width={400} height={250} alt={post.title} className="w-full h-48 object-cover" />
-            <div className="p-4">
-              <h3 className="text-xl font-semibold">{post.title}</h3>
-            </div>
+    <>
+      <Navbar />
+      <section className="py-12 px-6 max-w-6xl mx-auto">
+        {/* Featured Blog Section */}
+        <div className="relative w-full h-[500px] flex flex-col justify-end p-8 bg-black/50 text-white rounded-lg overflow-hidden">
+          <Image
+            src="/images/featured-blog.jpg" // Replace with actual image
+            alt="Featured Blog"
+            layout="fill"
+            objectFit="cover"
+            className="-z-10 absolute inset-0"
+          />
+          <h1 className="text-4xl font-bold max-w-2xl">
+            How to Listen to Your Body: Understanding Hunger, Cravings &
+            Fullness
+          </h1>
+          <p className="mt-2 max-w-xl">
+            Explore ways to improve your relationship with food and your body.
+          </p>
+          <a
+            href="#"
+            className="mt-4 bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition"
+          >
+            Read More
           </a>
-        ))}
-      </div>
-    </section>
+        </div>
+
+        {/* Recent Blog Posts Section */}
+        <h2 className="text-3xl font-bold mt-12 mb-6">Recent Blog Posts</h2>
+
+        <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-8">
+          {blogPosts.map((post, index) => (
+            <a
+              key={index}
+              href={post.link}
+              className="block bg-white shadow-lg rounded-lg overflow-hidden"
+            >
+              <Image
+                src={post.image}
+                width={400}
+                height={250}
+                alt={post.title}
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-4">
+                <h3 className="text-xl font-semibold">{post.title}</h3>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+    </>
   );
 }
