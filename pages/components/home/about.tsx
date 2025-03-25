@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const About = () => {
   return (
@@ -23,7 +24,7 @@ const About = () => {
         </div>
 
           <button className="px-6 py-3 bg-primary-main text-white rounded-lg">
-            Learn more about Abby
+            <Link href="/about">Learn more about Abby</Link>
           </button>
       </div>
       <Image

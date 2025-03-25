@@ -45,7 +45,7 @@ const Navbar = () => {
             <button
               className="bg-primary-main text-base text-white items-center justify-center rounded-lg w-[83px] h-[52px] "
             >
-              <a href="/contact">Contact</a>
+              <Link href="/contact">Contact</Link>
             </button>
           </div>
 
@@ -107,7 +107,7 @@ const Navbar = () => {
               <button
               className="bg-primary-main text-base text-white items-center justify-center rounded-lg w-full h-10 "
             >
-              <a href="/contact">Contact</a>
+              <Link href="/contact">Contact</Link>
             </button>
             </div>
           </div>

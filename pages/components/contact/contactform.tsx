@@ -41,59 +41,63 @@ export default function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 bg-white p-6 shadow-md rounded-lg">
-      <div>
-        <label className="block text-gray-600">Full Name</label>
+    <form onSubmit={handleSubmit} className="space-y-4 lg:space-y-10 bg-white rounded-lg">
+      <div className='flex flex-col gap-4'>
+        <label className="block text-black">Full Name</label>
         <input
           type="text"
           name="name"
           value={formData.name}
           onChange={handleChange}
-          className="w-full p-3 border border-gray-300 rounded-lg"
+          className="w-full p-3 border bg-[#F6F6F6] border-[#F6F6F6] rounded-lg"
+          placeholder='Enter your full name'
           required
         />
       </div>
-      <div>
-        <label className="block text-gray-600">Email Address</label>
+      <div className='flex flex-col gap-4'>
+        <label className="block text-black">Email Address</label>
         <input
           type="email"
           name="email"
           value={formData.email}
           onChange={handleChange}
-          className="w-full p-3 border border-gray-300 rounded-lg"
+          placeholder='Enter your email address'
+          className="w-full p-3 border bg-[#F6F6F6] border-[#F6F6F6] rounded-lg"
           required
         />
       </div>
-      <div>
-        <label className="block text-gray-600">Phone Number</label>
+      <div className='flex flex-col gap-4'>
+        <label className="block text-black">Phone Number</label>
         <input
           type="text"
           name="phone"
           value={formData.phone}
           onChange={handleChange}
-          className="w-full p-3 border border-gray-300 rounded-lg"
+          placeholder='Enter your phone number'
+          className="w-full p-3 border bg-[#F6F6F6] border-[#F6F6F6] rounded-lg"
         />
       </div>
-      <div>
-        <label className="block text-gray-600">Message</label>
+      <div className='flex flex-col gap-4'>
+        <label className="block text-black">Message</label>
         <textarea
           name="message"
           value={formData.message}
           onChange={handleChange}
-          className="w-full p-3 border border-gray-300 rounded-lg"
-          rows={4} // ✅ Change `rows="4"` to `rows={4}`
+          placeholder='Tell me about your health goals'
+          className="w-full p-3 border bg-[#F6F6F6] border-[#F6F6F6] rounded-lg"
+          rows={5} // ✅ Change `rows="4"` to `rows={4}`
           required
         />
       </div>
       <button
         type="submit"
-        className="w-full bg-green-600 text-white p-3 rounded-lg hover:bg-green-700 transition"
+        className="w-full bg-primary-main text-white p-3 hover:bg-primary-main transition"
         disabled={loading}
       >
         {loading ? 'Sending...' : 'Send Message'}
       </button>
 
-      {success && <p className="text-green-500 text-center mt-2">Message sent successfully!</p>}
+      {success && <p className="text-primary-main text-center mt-2">Message sent successfully!</p>}
     </form>
   );
 }

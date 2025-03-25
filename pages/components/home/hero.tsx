@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -14,10 +15,12 @@ const Hero = () => {
       </p>
       <div className="flex flex-col md:flex-row gap-4 justify-center lg:justify-start mt-5 lg:mt-10 ">
         <button className="px-6 py-3 bg-primary-main text-white rounded-lg">
+          <Link href="/consultation" >
           Book Consultation
+          </Link>
         </button>
         <button className="px-6 py-3 bg-primary-main text-white rounded-lg">
-          Book Health Coaching
+        <Link href="/#" >Book Health Coaching</Link>
         </button>
       </div>
     </div>

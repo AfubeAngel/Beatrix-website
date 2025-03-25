@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const blogPosts = [
     {
@@ -47,9 +48,9 @@ const blogPosts = [
   
         {/* Button to View All Posts */}
         <div className="mt-8 text-center">
-          <a href="#" className="bg-primary-main text-white px-6 py-2 rounded-md inline-block">
+          <Link href="/blog" className="bg-primary-main text-white px-6 py-2 rounded-md inline-block">
             View all posts →
-          </a>
+          </Link>
         </div>
       </section>
     );
