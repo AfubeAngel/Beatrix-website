@@ -9,12 +9,12 @@ const About = () => {
           Meet Abby: The Coach Who Puts Your health First
         </h2>
         <div className="lg:max-w-[528px] mt-6 text-default text-lg tracking-tight mb-10 ">
-        <p className="mb-4">
-          Hi, I’m Abimbola—call me Health Coach Abby! Based in Lagos, Nigeria,
-          I’m a mom of two whose personal health journey inspired me to help
-          others. After battling my own health challenges, I discovered the
-          power of integrative nutrition and sustainable lifestyle shifts.
-        </p>
+          <p className="mb-4">
+            Hi, I’m Abimbola—call me Health Coach Abby! Based in Lagos, Nigeria,
+            I’m a mom of two whose personal health journey inspired me to help
+            others. After battling my own health challenges, I discovered the
+            power of integrative nutrition and sustainable lifestyle shifts.
+          </p>
           <p>
             Now, as a certified Integrative Nutrition Health Coach, I work with
             you to create personalized, practical wellness strategies that fit
@@ -23,9 +23,9 @@ const About = () => {
           </p>
         </div>
 
-          <button className="px-6 py-3 bg-primary-main text-white rounded-lg">
-            <Link href="/about">Learn more about Abby</Link>
-          </button>
+        <button className="px-6 py-3 bg-primary-main text-white rounded-lg">
+          <Link href="/about">Learn more about Abby</Link>
+        </button>
       </div>
       <Image
         src="/aboutimage.png"

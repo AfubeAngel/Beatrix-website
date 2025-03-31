@@ -2,7 +2,7 @@ import ApproachImages from "./approach-imagesection";
 
 const Approach = () => {
     return (
-        <div className="mt-20 lg:mt-[100px] flex flex-col items-center text-center px-4 lg:px-[120px]  ">
+        <div className="mt-20 lg:mt-[100px] flex flex-col items-center px-4 lg:px-[120px] max-w-8xl mx-auto ">
             <h2 className="xl:text-5xl text-2xl tracking-wide font-semibold text-black p-0 lg:leading-15">
             My Approach To Health and Wellness
             </h2>
