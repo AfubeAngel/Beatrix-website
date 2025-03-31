@@ -1,3 +1,4 @@
+import Link from "next/link";
 import ContactForm from "./components/contact/contactform";
 import ContactInfo from "./components/contact/contactinfo";
 import FAQ from "./components/contact/faq";
@@ -30,7 +31,9 @@ export default function Consultation() {
               new health goal.
             </p>
             <button className="mt-4 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">
+              <Link href="/firstconsultation">
               Book consultation
+              </Link>
             </button>
           </div>
 
