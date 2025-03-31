@@ -7,7 +7,7 @@ const SubFooter = () => {
           When was the last time you received the personal attention you deserve and talked with someone about your health?.
         </p>
         <button className="text-black py-4 rounded-[10px] bg-white flex items-center justify-center w-[145px] h-[52px] ">
-          <Link className="font-medium text-sm" href="">Book Consultation</Link></button>
+          <Link className="font-medium text-sm" href="/consultation">Book Consultation</Link></button>
       </div>
     );
   };
