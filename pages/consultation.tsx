@@ -46,7 +46,9 @@ export default function Consultation() {
               continue their wellness journey.
             </p>
             <button className="mt-4 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">
+              <Link href="/followup">
               Schedule follow-up consultation
+              </Link>
             </button>
           </div>
         </div>

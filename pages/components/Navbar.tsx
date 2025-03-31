@@ -10,6 +10,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto ">
         <div className="flex justify-between items-center ">
           {/* Logo */}
+          <Link href="/">
           <Image
             src="/Logo.svg"
             className="hidden lg:block"
@@ -24,6 +25,7 @@ const Navbar = () => {
             width={48}
             height={37.67}
           />
+          </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex md:items-center text-[20px] space-x-12">
