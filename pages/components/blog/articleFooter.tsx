@@ -1,3 +1,4 @@
+import Image from "next/image";
 import LatestArticles from "./latestarticles";
 
 interface Article {
@@ -21,7 +22,7 @@ export default function ArticleFooter({ latestArticles }: ArticleFooterProps) {
     <footer className="mt-12 border-t pt-8">
       {/* Author Section */}
       <div className="flex items-center space-x-4">
-        <img
+        <Image
           src="/images/author.jpg"
           alt="Author"
           className="w-12 h-12 rounded-full"
