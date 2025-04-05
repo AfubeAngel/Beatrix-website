@@ -4,7 +4,7 @@ const Journey = () => {
   return (
     <section className="flex flex-col lg:flex-row gap-12 xl:gap-[154px] mt-20 lg:mt-30 mb-6 lg:mb-10 justify-center px-4 lg:px-[120px] ">
       <Image
-        src="/Aboutpage-hero.png"
+        src="/about-2.png"
         alt="about"
         width={500}
         height={500}

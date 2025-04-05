@@ -4,7 +4,7 @@ export default function Strategy() {
   return (
       <div className="mt-16 flex flex-col gap-10 ">
         {/* Resource Item 1 */}
-        <div className="flex justify-between mx-auto items-center text-center bg-white px-4 lg:px-[120px]">
+        <div className="flex justify-between items-center text-center bg-white px-4 lg:px-[120px]">
             <div>
             <h3 className="text-xl font-semibold mt-4">7-Day Meal Planner for Balanced Energy</h3>
           <p className="text-gray-500 mt-2">A structured meal plan designed to keep you energized and healthy.</p>
@@ -13,7 +13,7 @@ export default function Strategy() {
           </button>
             </div>
           <Image
-            src="/images/meal-planner.png" // Replace with actual image
+            src="/resource-phone.png" // Replace with actual image
             width={200}
             height={300}
             alt="7-Day Meal Planner"
@@ -22,9 +22,9 @@ export default function Strategy() {
         </div>
 
         {/* Resource Item 2 */}
-        <div className="flex justify-between mx-auto items-center text-center bg-white px-4 lg:px-[120px]">
+        <div className="flex justify-between items-center text-center bg-white px-4 lg:px-[120px]">
           <Image
-            src="/images/immunity-guide.png" // Replace with actual image
+            src="/resource-phone.png" // Replace with actual image
             width={200}
             height={300}
             alt="Immunity Guide"

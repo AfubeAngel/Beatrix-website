@@ -10,7 +10,7 @@ export default function Hero() {
       <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
         Explore valuable tools & guides to supercharge your nutrition and well-being.
       </p>
-      <button className="mt-6 bg-green-600 text-white px-6 py-2 rounded-lg shadow-md hover:bg-green-700 transition">
+      <button className="mt-6 bg-primary-main text-white px-6 py-2 rounded-lg shadow-md hover:bg-green-700 transition">
         Download Free Guide
       </button>
 
@@ -24,6 +24,7 @@ export default function Hero() {
           className="drop-shadow-lg"
         />
       </div>
+    <div className="bg-[#A7C78F] h-20 w-full absolute top-[500px]  "></div>
 
 
     </section>
