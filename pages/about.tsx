@@ -1,6 +1,6 @@
 
 import BookConsultation from "./components/about/book-consultation";
-import Hero from "./components/about/Hero";
+import Hero from "./components/about/hero";
 import Journey from "./components/about/journey";
 import Trainings from "./components/about/trainings";
 import Navbar from "./components/Navbar";
