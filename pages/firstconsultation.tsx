@@ -50,8 +50,8 @@ export default function Consultation() {
   return (
     <>
       <Navbar />
-      <div className="min-h-screen flex justify-center max-w-7xl mx-auto py-10 px-4 lg:px-[150px]">
-        <div className="bg-white p-8 rounded-lg w-full ">
+      <div className="min-h-screen flex max-w-7xl mx-auto py-10 px-4 lg:px-[150px]">
+        <div className="bg-white rounded-lg w-full ">
           <h2 className="text-2xl font-bold text-center mb-4">
             First-time Consultation
           </h2>
@@ -60,26 +60,28 @@ export default function Consultation() {
             personalized 30-minute consultation.
           </p>
 
-          <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-            {/* Full Name */}
-            <div>
-              <label className="block text-gray-700">Full Name</label>
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 items-center ">
+            {/* Full Name */}     
+            <div className='flex flex-col gap-4'>
+              <label className="block text-black">Full Name</label>
               <input
-                {...register("fullName")}
+              {...register("fullName")}
                 type="text"
-                placeholder="Enter your full name"
-                className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                name="name"
+                className="w-full p-3 border bg-[#F6F6F6] border-[#F6F6F6] rounded-lg"
+                placeholder='Enter your full name'
+                required
               />
             </div>
 
             {/* Email */}
-            <div>
-              <label className="block text-gray-700">Email Address</label>
+            <div className='flex flex-col gap-4'>
+              <label className="block text-black">Email Address</label>
               <input
                 {...register("email")}
                 type="email"
                 placeholder="Enter your email"
-                className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full p-3 border bg-[#F6F6F6] border-[#F6F6F6] rounded-lg"
               />
             </div>
 
@@ -99,13 +101,13 @@ export default function Consultation() {
                   )}
                 />
               </div>
-              <div>
-                <label className="block text-gray-700">Age</label>
+              <div className='flex flex-col gap-4'>
+                <label className="block text-black">Age</label>
                 <input
                   {...register("age")}
                   type="number"
                   placeholder="Enter your age"
-                  className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full p-3 border bg-[#F6F6F6] border-[#F6F6F6] rounded-lg"
                 />
               </div>
             </div>
@@ -118,7 +120,7 @@ export default function Consultation() {
                   {...register("phone")}
                   type="tel"
                   placeholder="Enter phone number"
-                  className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full p-3 border bg-[#F6F6F6] border-[#F6F6F6] rounded-lg"
                 />
               </div>
               <div>
@@ -139,7 +141,11 @@ export default function Consultation() {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
+            <div className="mt-10 lg:mt-[100px]">
+          <h3>Pick Your Consultation Time</h3>
+          <p>Select a date and time that works best for you. Your consultation will be held via 
+          Google Meet, and you’ll receive a link after booking</p>
+            <div className="grid grid-cols-2 gap-4 mt-10">
             {/* Date Picker */}
             <div>
               <label className="block w-full text-gray-700">
@@ -169,11 +175,12 @@ export default function Consultation() {
               />
             </div>
             </div>
+            </div>
 
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full bg-primary-main text-white py-2 rounded-lg hover:bg-blue-700 transition"
+              className="w-[198px] h-[52px] mt-10 lg:mt-[100px] bg-primary-main text-white py-2 rounded-lg hover:bg-green-700 transition"
             >
               Book your consultation
             </button>

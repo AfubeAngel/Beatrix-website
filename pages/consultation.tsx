@@ -8,7 +8,7 @@ export default function Consultation() {
   return (
     <>
       <Navbar />
-      <section className=" mt-8 lg:mt-[85px] max-w-7xl mx-auto px-4 lg:px-[120px]">
+      <section className=" mt-8 lg:mt-[85px] max-w-7xl mx-auto px-4 lg:px-[50px]">
         <div className="flex flex-col items-center gap-4">
         <h2 className="text-[36px] lg:text-[64px] font-semibold text-center leading-18 max-w-3xl">
           Schedule Consultation and Health Coaching
