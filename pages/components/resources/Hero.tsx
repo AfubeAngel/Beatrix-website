@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="py-12 px-6 max-w-6xl mx-auto text-center">
-      {/* Hero Section */}
+    <section className="py-4 lg:py-12 mx-auto text-center relative">
+      {/* Text Section */}
       <h1 className="text-4xl font-bold leading-tight">
         Free Resources to Transform Your Health
       </h1>
@@ -14,19 +14,20 @@ export default function Hero() {
         Download Free Guide
       </button>
 
-      {/* Image Section */}
-      <div className="relative flex justify-center">
+      {/* Image + Green Stripe Section */}
+      <div className="relative mt-10 lg:mt-45 flex justify-center items-center h-[400px]">
+        {/* Green stripe behind */}
+        <div className="absolute top-1/2 left-0 w-full h-20 bg-[#A7C78F] -translate-y-1/2 z-0" />
+        
+        {/* Image in front */}
         <Image
-          src="/resources-hero.png" // Replace with actual image
+          src="/resources-hero.png"
           width={800}
           height={500}
           alt="Health Resources"
-          className="drop-shadow-lg"
+          className="drop-shadow-lg relative z-10"
         />
       </div>
-    <div className="bg-[#A7C78F] h-20 w-full absolute top-[500px]  "></div>
-
-
     </section>
   );
 }
