@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useForm, Controller, SubmitHandler } from "react-hook-form";
+import Select, { GroupBase, StylesConfig } from "react-select";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import Select from "react-select";
 import Navbar from "./components/Navbar";
 
 // Define TypeScript Interface for Form Data
@@ -16,9 +16,33 @@ interface ConsultationFormData {
   time: { value: string; label: string } | null;
 }
 
+interface OptionType {
+  value: string;
+  label: string;
+}
+
 export default function Consultation() {
   const { register, handleSubmit, control } = useForm<ConsultationFormData>();
   const [selectedDate, setSelectedDate] = useState<Date | null>(new Date());
+
+  const customStyles: StylesConfig<OptionType, false, GroupBase<OptionType>> = {
+    control: (provided, state) => ({
+      ...provided,
+      backgroundColor: "#F6F6F6",
+      borderColor: "#F6F6F6",
+      borderRadius: "0.5rem",
+      padding: "3px",
+      height: "50px",
+      boxShadow: state.isFocused ? "0 0 0 1px #a7c78f" : "none",
+      "&:hover": {
+        borderColor: "#cbd5e0",
+      },
+    }),
+    placeholder: (provided) => ({
+      ...provided,
+      color: "#9ca3af",
+    }),
+  };
 
   const genderOptions = [
     { value: "male", label: "Male" },
@@ -51,8 +75,8 @@ export default function Consultation() {
     <>
       <Navbar />
       <div className="min-h-screen flex max-w-7xl mx-auto py-10 px-4 lg:px-[150px]">
-        <div className="bg-white rounded-lg w-full ">
-          <h2 className="text-2xl font-bold text-center mb-4">
+        <div className="bg-white rounded-lg w-full">
+          <h2 className="text-[36px] lg:text-[64px] font-bold text-center mb-4">
             First-time Consultation
           </h2>
           <p className="text-gray-500 text-center mb-6">
@@ -60,22 +84,25 @@ export default function Consultation() {
             personalized 30-minute consultation.
           </p>
 
-          <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 items-center ">
-            {/* Full Name */}     
-            <div className='flex flex-col gap-4'>
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            className="space-y-4 items-center "
+          >
+            {/* Full Name */}
+            <div className="flex flex-col gap-4">
               <label className="block text-black">Full Name</label>
               <input
-              {...register("fullName")}
+                {...register("fullName")}
                 type="text"
                 name="name"
                 className="w-full p-3 border bg-[#F6F6F6] border-[#F6F6F6] rounded-lg"
-                placeholder='Enter your full name'
+                placeholder="Enter your full name"
                 required
               />
             </div>
 
             {/* Email */}
-            <div className='flex flex-col gap-4'>
+            <div className="flex flex-col gap-4">
               <label className="block text-black">Email Address</label>
               <input
                 {...register("email")}
@@ -87,7 +114,7 @@ export default function Consultation() {
 
             {/* Gender & Age */}
             <div className="grid grid-cols-2 gap-4">
-              <div>
+              <div className="flex flex-col gap-4">
                 <label className="block text-gray-700">Gender</label>
                 <Controller
                   name="gender"
@@ -96,12 +123,14 @@ export default function Consultation() {
                     <Select
                       {...field}
                       options={genderOptions}
-                      placeholder="Select gender"
+                      styles={customStyles}
+                      placeholder="Enter your gender"
+                      isClearable
                     />
                   )}
                 />
               </div>
-              <div className='flex flex-col gap-4'>
+              <div className="flex flex-col gap-4">
                 <label className="block text-black">Age</label>
                 <input
                   {...register("age")}
@@ -114,7 +143,7 @@ export default function Consultation() {
 
             {/* Phone Number & Contact Method */}
             <div className="grid grid-cols-2 gap-4">
-              <div>
+              <div className="flex flex-col gap-4">
                 <label className="block text-gray-700">Phone Number</label>
                 <input
                   {...register("phone")}
@@ -123,7 +152,7 @@ export default function Consultation() {
                   className="w-full p-3 border bg-[#F6F6F6] border-[#F6F6F6] rounded-lg"
                 />
               </div>
-              <div>
+              <div className="flex flex-col gap-4">
                 <label className="block text-gray-700">
                   Preferred Contact Method
                 </label>
@@ -134,7 +163,9 @@ export default function Consultation() {
                     <Select
                       {...field}
                       options={contactMethods}
+                      styles={customStyles}
                       placeholder="Select method"
+                      isClearable
                     />
                   )}
                 />
@@ -142,39 +173,57 @@ export default function Consultation() {
             </div>
 
             <div className="mt-10 lg:mt-[100px]">
-          <h3>Pick Your Consultation Time</h3>
-          <p>Select a date and time that works best for you. Your consultation will be held via 
-          Google Meet, and you’ll receive a link after booking</p>
-            <div className="grid grid-cols-2 gap-4 mt-10">
-            {/* Date Picker */}
-            <div>
-              <label className="block w-full text-gray-700">
-                Select Preferred Date
-              </label>
-              <DatePicker
-                selected={selectedDate}
-                onChange={(date) => setSelectedDate(date)}
-                dateFormat="MMMM d, yyyy"
-                className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-
-            {/* Time Selection */}
-            <div>
-              <label className="block text-gray-700">Choose a Time</label>
-              <Controller
-                name="time"
-                control={control}
-                render={({ field }) => (
-                  <Select
-                    {...field}
-                    options={timeSlots}
-                    placeholder="Select time"
+              <h3 className="text-2xl lg:text-[36px] font-bold ">
+                Pick Your Consultation Time
+              </h3>
+              <p>
+                Select a date and time that works best for you. Your
+                consultation will be held via Google Meet, and you’ll receive a
+                link after booking
+              </p>
+              <div className="grid grid-cols-2 gap-4 mt-10">
+                {/* Date Picker */}
+                <div className="w-full flex flex-col gap-4">
+                  <label className="block text-gray-700 font-medium">
+                    Select Preferred Date
+                  </label>
+                  <DatePicker
+                    selected={selectedDate}
+                    onChange={(date) => setSelectedDate(date)}
+                    dateFormat="MMMM d, yyyy"
+                    placeholderText="Select date"
+                    className="w-full px-4 py-3 bg-[#F6F6F6] border border-[#F6F6F6] rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-main"
+                    calendarClassName="bg-white shadow-lg p-4 rounded-2xl border border-gray-100"
+                    dayClassName={(date) =>
+                      `text-gray-700 hover:bg-primary-light w-10 h-10 rounded-full flex items-center justify-center ${
+                        selectedDate?.toDateString() === date.toDateString()
+                          ? "bg-primary-main text-white"
+                          : ""
+                      }`
+                    }
+                    popperPlacement="bottom-start"
+                    popperClassName="!z-50"
                   />
-                )}
-              />
-            </div>
-            </div>
+                </div>
+
+                {/* Time Selection */}
+                <div className="flex flex-col gap-4">
+                  <label className="block text-gray-700">Choose a Time</label>
+                  <Controller
+                    name="time"
+                    control={control}
+                    render={({ field }) => (
+                      <Select
+                        {...field}
+                        options={timeSlots}
+                        styles={customStyles}
+                        placeholder="Select time"
+                        isClearable
+                      />
+                    )}
+                  />
+                </div>
+              </div>
             </div>
 
             {/* Submit Button */}

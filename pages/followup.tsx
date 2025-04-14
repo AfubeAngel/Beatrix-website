@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import Select from "react-select";
+import Select, { StylesConfig }  from "react-select";
 import Navbar from "./components/Navbar";
 
 // Define TypeScript Interface for Form Data
@@ -20,9 +20,64 @@ interface FollowUpFormData {
   cookingMore: string;
 }
 
+type OptionType = {
+  value: string;
+  label: string;
+};
+
+
+
 export default function FollowUpConsultation() {
   const { register, handleSubmit } = useForm<FollowUpFormData>();
   const [loading, setLoading] = useState(false);
+
+  const customStyles: StylesConfig<OptionType, false> = {
+    control: (provided, state) => ({
+      ...provided,
+      backgroundColor: "#f7f7f7",
+      border: "1px solid #e5e7eb",
+      borderRadius: "0.5rem",
+      height: "50px",
+      padding: "0.25rem 0.5rem",
+      boxShadow: state.isFocused ? "0 0 0 2px #37A18E" : "none",
+      "&:hover": {
+        borderColor: "#37A18E",
+      },
+    }),
+    placeholder: (provided) => ({
+      ...provided,
+      color: "#9ca3af",
+      fontSize: "0.95rem",
+    }),
+    singleValue: (provided) => ({
+      ...provided,
+      color: "#111827",
+    }),
+    indicatorSeparator: () => ({
+      display: "none",
+    }),
+    dropdownIndicator: (provided) => ({
+      ...provided,
+      color: "#6b7280",
+    }),
+    menu: (provided) => ({
+      ...provided,
+      borderRadius: "0.5rem",
+      boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+      zIndex: 50,
+    }),
+    option: (provided, state) => ({
+      ...provided,
+      backgroundColor: state.isFocused
+        ? "#e0f2f1"
+        : state.isSelected
+        ? "#37A18E"
+        : "#fff",
+      color: state.isSelected ? "#fff" : "#111827",
+      padding: "0.5rem 1rem",
+      cursor: "pointer",
+    }),
+  };
 
   const genderOptions = [
     { value: "male", label: "Male" },
@@ -108,11 +163,14 @@ export default function FollowUpConsultation() {
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4">
+            <div className="w-full flex flex-col gap-4 ">
+              <label className="block text-gray-800 font-medium">Gender</label>
               <Select
                 options={genderOptions}
-                placeholder="Gender"
-                className="w-full "
+                placeholder="Enter your gender"
+                styles={customStyles}
               />
+            </div>
               <div className="flex flex-col gap-4">
                 <label className="block text-black">Age</label>
                 <input
@@ -229,12 +287,14 @@ export default function FollowUpConsultation() {
             </div>
 
             {/* Submit Button */}
+            <div className="flex justify-center mt-8">
             <button
               type="submit"
               className="w-[121px] h-[52px] bg-primary-main text-white py-2 rounded-lg hover:bg-green-700 transition"
             >
               {loading ? "Submitting..." : "Submit form"}
             </button>
+            </div>
           </form>
 
           {/* health assessment Cards */}
