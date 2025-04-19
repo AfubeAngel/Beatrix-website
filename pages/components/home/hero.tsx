@@ -19,7 +19,7 @@ const Hero = () => {
           Book Consultation
           </Link>
         </button>
-        <button className="px-6 py-3 bg-primary-main text-white rounded-lg">
+        <button className="px-6 py-3 text-[#162211] font-medium border-[2px] border-[#53793C] bg-white rounded-lg">
         <Link href="/#" >Book Health Coaching</Link>
         </button>
       </div>

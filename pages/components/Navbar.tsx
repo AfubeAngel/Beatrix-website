@@ -36,22 +36,46 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex md:items-center text-[20px] space-x-12">
-            <Link href="/" className="text-default hover:text-primary-main ">
+            <Link
+              href="/"
+              className={`${
+                router.pathname === "/"
+                  ? "text-[#53793C] font-semibold"
+                  : "text-[#6D6D6D]"
+              } hover:text-[#53793C]`}
+            >
               Home
             </Link>
             <Link
               href="/about"
-              className="text-default hover:text-primary-main"
+              className={`${
+                router.pathname === "/about"
+                  ? "text-[#53793C] font-semibold"
+                  : "text-[#6D6D6D]"
+              } hover:text-[#53793C]`}
             >
               About
             </Link>
+
             <Link
               href="/resources"
-              className="text-default hover:text-green-700"
+              className={`${
+                router.pathname === "/resources"
+                  ? "text-[#53793C] font-semibold"
+                  : "text-[#6D6D6D]"
+              } hover:text-[#53793C]`}
             >
               Resources
             </Link>
-            <Link href="/blog" className="text-default hover:text-green-700">
+
+            <Link
+              href="/blog"
+              className={`${
+                router.pathname.startsWith("/blog")
+                  ? "text-[#53793C] font-semibold"
+                  : "text-[#6D6D6D]"
+              } hover:text-[#53793C]`}
+            >
               Blog
             </Link>
 
@@ -117,25 +141,25 @@ const Navbar = () => {
             <div className="flex flex-col items-center space-y-20">
               <Link
                 href="/"
-                className="block text-gray-700 hover:text-green-700"
+                className="block text-gray-700 hover:text-[#53793C] active:text-[#53793C]"
               >
                 Home
               </Link>
               <Link
                 href="/about"
-                className="block text-gray-700 hover:text-green-700"
+                className="block text-gray-700 hover:text-[#53793C] active:text-[#53793C]"
               >
                 About
               </Link>
               <Link
                 href="/resources"
-                className="block text-gray-700 hover:text-green-700"
+                className="block text-gray-700 hover:text-[#53793C] active:text-[#53793C]"
               >
                 Resources
               </Link>
               <Link
                 href="/blog"
-                className="block text-gray-700 hover:text-green-700"
+                className="block text-gray-700 hover:text-[#53793C] active:text-[#53793C]"
               >
                 Blog
               </Link>

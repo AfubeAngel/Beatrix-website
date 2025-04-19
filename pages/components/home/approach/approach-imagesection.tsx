@@ -30,14 +30,6 @@ export default function ApproachImages() {
   ];
 
   return (
-    // <div className="min-h-screen py-10 px-6">
-    //   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-    //     {cardData.map((card, index) => (
-    //       <Card key={index} {...card} />
-    //     ))}
-    //   </div>
-    // </div>
-
 <div className="flex flex-wrap gap-6 max-w-[344px] md:max-w-7xl mx-auto ">
 {cardData.map((card, index) => (
   <div 

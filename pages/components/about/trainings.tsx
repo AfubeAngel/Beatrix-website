@@ -49,8 +49,8 @@ export default function AutoScrollSlider() {
         <div className="splide__track">
           <ul className="splide__list">
             {testimonials.map((person, index) => (
-              <li key={index} className="splide__slide bg-white py-2 px-4 rounded-lg shadow-lg border border-black flex gap-2 items-center w-[385px] h-[67px]">
-                <Image src={person.img} width={50} height={50} className="rounded-full mb-3" alt={person.name} />
+              <li key={index} className="splide__slide bg-white py-2 px-4 rounded-2xl shadow-lg border border-[#53793C] flex gap-2 items-center max-w-[385px] h-[67px]">
+                <Image src={person.img} width={40} height={40} className="rounded-full ml-4 mt-2 mb-3" alt={person.name} />
                 <div className="flex flex-col gap-2">
                 <p className="font-bold text-lg">{person.name}</p>
                 <p className="text-gray-500 text-sm">{person.role}</p>

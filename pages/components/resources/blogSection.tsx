@@ -38,7 +38,7 @@ export default function BlogSection() {
           {blogPosts.map((post, index) => (
             <div
               key={index}
-              className="bg-white shadow-lg rounded-lg overflow-hidden"
+              className="bg-white rounded-lg overflow-hidden"
             >
               <Image
                 src={post.image}
