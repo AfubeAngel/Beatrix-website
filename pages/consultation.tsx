@@ -8,7 +8,7 @@ export default function Consultation() {
   return (
     <>
       <Navbar />
-      <section className=" mt-8 lg:mt-[85px] max-w-7xl mx-auto px-4 lg:px-[50px]">
+      <section className=" mt-8 lg:mt-[85px] max-w-7xl mx-auto px-4 lg:px-[150px]">
         <div className="flex flex-col items-center gap-4">
         <h2 className="text-[36px] lg:text-[64px] font-semibold text-center leading-18 max-w-3xl">
           Schedule Consultation and Health Coaching
@@ -26,7 +26,7 @@ export default function Consultation() {
             <p className="text-default ">Start your wellness journey by selecting the appropriate consultation and completing your personalized health assessment. All of your information will remain confidential between you and the Health Coach</p>
         </div>
         <div className="grid md:grid-cols-2 gap-6">
-          <div className="bg-gray-100 p-6 rounded-lg shadow-md ">
+          <div className="bg-gray-100 p-6 rounded-lg ">
             <h3 className="text-xl font-semibold">First-time consultation</h3>
             <p className="text-gray-600 mt-2">
               For new clients starting their wellness journey or addressing a
@@ -39,7 +39,7 @@ export default function Consultation() {
             </button>
           </div>
 
-          <div className="bg-gray-100 p-6 rounded-lg shadow-md ">
+          <div className="bg-gray-100 p-6 rounded-lg">
             <h3 className="text-xl font-semibold">
               Follow-Up Consultation (Revisit)
             </h3>
@@ -64,7 +64,7 @@ export default function Consultation() {
             All of your information will remain confidential between you and the Health Coach</p>
         </div>
         <div className="grid md:grid-cols-2 gap-6">
-          <div className="bg-gray-100 p-6 rounded-lg shadow-md ">
+          <div className="bg-gray-100 p-6 rounded-lg ">
             <h3 className="text-xl font-semibold">Women’s Health Form</h3>
             <p className="text-gray-600 mt-2">
             Comprehensive questionnaire covering nutritional needs, health history, and women-specific wellness
@@ -76,7 +76,7 @@ export default function Consultation() {
             </button>
           </div>
 
-          <div className="bg-gray-100 p-6 rounded-lg shadow-md ">
+          <div className="bg-gray-100 p-6 rounded-lg ">
             <h3 className="text-xl font-semibold">
             Men’s Health Form
             </h3>
