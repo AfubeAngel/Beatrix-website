@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import Select, { StylesConfig }  from "react-select";
 import Navbar from "./components/Navbar";
+import Link from "next/link";
 
 // Define TypeScript Interface for Form Data
 interface FollowUpFormData {
@@ -298,46 +299,40 @@ export default function FollowUpConsultation() {
           </form>
 
           {/* health assessment Cards */}
-          <section className="flex flex-col gap-10 mt-10 lg:mt-20">
-            <div className="flex flex-col gap-5">
-              <h3 className="text-2xl lg:text-4xl font-semibold">
-                Health Assessment Forms
-              </h3>
-              <p className="text-default">
-                Start your wellness journey by selecting the appropriate
-                consultation and completing your personalized health assessment.
-                All of your information will remain confidential between you and
-                the Health Coach
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-gray-100 p-6 rounded-lg shadow-md ">
-                <h3 className="text-xl font-semibold">
-                  First-time consultation
-                </h3>
-                <p className="text-gray-600 mt-2">
-                  For new clients starting their wellness journey or addressing
-                  a new health goal.
-                </p>
-                <button className="mt-10 bg-primary-main text-white px-4 py-2 rounded-[10px] hover:bg-green-700">
-                  Book consultation
-                </button>
-              </div>
+        <section className="flex flex-col gap-10 mt-10 lg:mt-20">
+        <div className="flex flex-col gap-5">
+            <h3 className="text-2xl lg:text-4xl font-semibold">Health Assessment Forms</h3>
+            <p className="text-default">Complete the appropriate assessment before your coaching session for personalized guidance.  
+            All of your information will remain confidential between you and the Health Coach</p>
+        </div>
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="bg-gray-100 p-6 rounded-lg shadow-md ">
+            <h3 className="text-xl font-semibold">Women’s Health Form</h3>
+            <p className="text-gray-600 mt-2">
+            Comprehensive questionnaire covering nutritional needs, health history, and women-specific wellness
+            </p>
+            <button className="mt-10 bg-primary-main text-white px-4 py-2 rounded-[10px] hover:bg-green-700">
+            <Link href="/womenhealth">
+            Complete assessment form
+            </Link>
+            </button>
+          </div>
 
-              <div className="bg-gray-100 p-6 rounded-lg shadow-md ">
-                <h3 className="text-xl font-semibold">
-                  Follow-Up Consultation (Revisit)
-                </h3>
-                <p className="text-gray-600 mt-2">
-                  For existing clients to review progress, adjust plans, and
-                  continue their wellness journey.
-                </p>
-                <button className="mt-10 bg-primary-main text-white px-4 py-2 rounded-[10px] hover:bg-green-700">
-                  Schedule follow-up consultation
-                </button>
-              </div>
-            </div>
-          </section>
+          <div className="bg-gray-100 p-6 rounded-lg shadow-md ">
+            <h3 className="text-xl font-semibold">
+            Men’s Health Form
+            </h3>
+            <p className="text-gray-600 mt-2">
+            Comprehensive questionnaire covering nutritional needs, health history, and men-specific wellness
+            </p>
+            <button className="mt-10 bg-primary-main text-white px-4 py-2 rounded-[10px] hover:bg-green-700">
+            <Link href="/menhealth">
+            Complete assessment form
+            </Link>
+            </button>
+          </div>
+        </div>
+        </section>
         </div>
       </div>
     </>

@@ -10,6 +10,7 @@ import Hero from "./components/home/hero";
 import SubHero from "./components/home/sub-hero";
 import Testimonials from "./components/home/testimonial";
 import Navbar from "./components/Navbar";
+//import SignupPopup from "./components/SignupModal";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -33,6 +34,7 @@ export default function Home() {
       <Testimonials />
       <BlogSection />
       <SubFooter />
+      {/* <SignupPopup /> */}
     </div>
   );
 }

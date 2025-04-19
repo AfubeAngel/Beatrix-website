@@ -8,11 +8,11 @@ const BookConsultation = () => {
         about things beyond food, seeking to bring balance to important elements
         of your life such as love and relationships as well as career and money
       </p>
-      <Link href="/contact">
         <button className="px-6 py-3 bg-primary-main text-white rounded-lg hover:bg-green-700 transition">
+        <Link href="/consultation">
           Book a Session
-        </button>
       </Link>
+        </button>
     </div>
   );
 };
