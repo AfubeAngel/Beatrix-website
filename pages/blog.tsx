@@ -63,40 +63,41 @@ export default function BlogPage() {
   return (
     <>
       <Navbar />
-      <section className="py-12 px-6 max-w-7xl mx-auto">
-        {/* Featured Blog Section */}
-        <div className="relative w-full h-[500px] flex flex-col justify-end p-8 bg-black/50 text-white rounded-lg overflow-hidden">
-          <Image
-            src="/placeholder.png" // Replace with actual image
-            alt="Featured Blog"
-            className="-z-10 absolute inset-0"
-            width={1440}
-            height={900}
-          />
+
+      {/* Hero / Featured Blog Section */}
+      <section className="relative w-full h-screen flex flex-col justify-end text-white mt-5 max-h-[900px]">
+        <Image
+          src="/placeholder.png" // Replace with actual image
+          alt="Featured Blog"
+          fill
+          className="absolute inset-0 object-cover -z-10 "
+        />
+        <div className="bg-black/50 w-full h-full absolute top-0 left-0 z-0" />
+        <div className="relative z-10 max-w-5xl px-6 lg:px-[105px] pb-12">
           <h1 className="text-[30px] lg:text-[50px] font-bold max-w-2xl">
-            How to Listen to Your Body: Understanding Hunger, Cravings &
-            Fullness
+            How to Listen to Your Body: Understanding Hunger, Cravings & Fullness
           </h1>
           <p className="mt-2 max-w-xl">
             Explore ways to improve your relationship with food and your body.
           </p>
           <Link
             href="#"
-            className="mt-4 bg-white text-black w-[142px] h-[52px] px-2 flex justify-center items-center rounded-lg hover:bg-green-700 transition"
+            className="mt-4 bg-white text-black w-[142px] h-[52px] px-2 flex justify-center items-center rounded-lg hover:bg-green-700 hover:text-white transition"
           >
             Continue Reading
           </Link>
         </div>
+      </section>
 
-        {/* Recent Blog Posts Section */}
+      {/* Recent Blog Posts */}
+      <section className="py-12 px-6 max-w-7xl mx-auto">
         <h2 className="text-3xl font-bold mt-12 mb-6">Recent Blog Posts</h2>
-
         <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-8">
           {blogPosts.map((post, index) => (
             <a
               key={index}
               href={post.link}
-              className="block bg-white shadow-lg rounded-lg overflow-hidden"
+              className="block bg-white rounded-lg overflow-hidden"
             >
               <Image
                 src={post.image}
@@ -108,7 +109,7 @@ export default function BlogPage() {
               <div className="p-4 flex flex-col gap-2">
                 <h3 className="text-xl lg:text-[36px] tracking-tight leading-10 font-semibold">{post.title}</h3>
                 <p className="text-default text-sm">{post.description}</p>
-                <Link href="#" className="text-sm text-blue-600 underline ">Continue reading</Link>
+                <Link href="#" className="text-sm text-blue-600 underline">Continue reading</Link>
               </div>
             </a>
           ))}
@@ -117,3 +118,4 @@ export default function BlogPage() {
     </>
   );
 }
+

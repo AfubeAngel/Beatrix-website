@@ -13,7 +13,7 @@ const Navbar = () => {
   const isBlogPage = router.pathname.startsWith("/blog");
 
   return (
-    <nav className="bg-white mt-6 lg:mt-10 w-full z-50 px-4 lg:px-[105px]">
+    <nav className="bg-white mt-3 lg:mt-[29px] w-full z-50 px-4 lg:px-[105px]">
       <div className="max-w-7xl mx-auto ">
         <div className="flex justify-between items-center ">
           {/* Logo */}
