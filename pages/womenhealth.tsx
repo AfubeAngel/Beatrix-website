@@ -110,15 +110,14 @@ export default function WomenHealthForm() {
             <SelectField
               label="How often do you check your e-mail:"
               name="emailFrequency"
-              onChange={handleChange}
               value={formData.emailFrequency}
-              options={[
-                { value: "", label: "Select option" },
-                { value: "daily", label: "Daily" },
-                { value: "weekly", label: "Weekly" },
-                { value: "monthly", label: "Monthly" },
-              ]}
-            />
+              onChange={handleChange}
+            >
+              <option value="">Select option</option>
+              <option value="daily">Daily</option>
+              <option value="weekly">Weekly</option>
+            </SelectField>
+
             <InputField
               label="Phone Number"
               name="phone"
@@ -164,14 +163,14 @@ export default function WomenHealthForm() {
             <SelectField
               label="Would you like your weight to be different?"
               name="weightChangeDesire"
-              onChange={handleChange}
               value={formData.weightChangeDesire}
-              options={[
-                { value: "", label: "select option" },
-                { value: "yes", label: "Yes" },
-                { value: "no", label: "No" },
-              ]}
-            />
+              onChange={handleChange}
+            >
+              <option value="">Select option</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </SelectField>
+
             <InputField
               label="If so, what & how?"
               name="weightChangeDetails"
@@ -192,34 +191,31 @@ export default function WomenHealthForm() {
                 name="relationshipStatus"
                 onChange={handleChange}
                 value={formData.relationshipStatus}
-                options={[
-                  { value: "", label: "select option" },
-                  { value: "single", label: "Single" },
-                  { value: "married", label: "Married" },
-                ]}
-              />
+              >
+                <option value="">Select option</option>
+                <option value="single">Single</option>
+                <option value="married">Married</option>
+              </SelectField>
               <SelectField
                 label="Pets?"
                 name="pets"
                 onChange={handleChange}
                 value={formData.pets}
-                options={[
-                  { value: "", label: "select option" },
-                  { value: "yes", label: "Yes" },
-                  { value: "no", label: "No" },
-                ]}
-              />
+              >
+                <option value="">Select option</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </SelectField>
               <SelectField
                 label="Children?"
                 name="children"
                 onChange={handleChange}
                 value={formData.children}
-                options={[
-                  { value: "", label: "select option" },
-                  { value: "yes", label: "Yes" },
-                  { value: "no", label: "No" },
-                ]}
-              />
+              >
+                <option value="">Select option</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </SelectField>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
               <InputField
