@@ -6,7 +6,7 @@ type SelectProps = {
     options: { value: string; label: string }[];
   };
   
-  export default function SelectField({ label, name, value, onChange, options }: SelectProps) {
+  export default function SelectField({ label, name, value, onChange, options=[] }: SelectProps) {
     return (
       <div className="flex flex-col gap-4">
         <label className="block text-black ">{label}</label>
