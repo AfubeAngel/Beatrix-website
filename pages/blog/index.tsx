@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Navbar from "./components/Navbar";
+import Navbar from "../components/Navbar";
 import Link from "next/link";
 
 const blogPosts = [
@@ -65,7 +65,7 @@ export default function BlogPage() {
       <Navbar />
 
       {/* Hero / Featured Blog Section */}
-      <section className="relative w-full h-screen flex flex-col justify-end text-white mt-5 max-h-[900px]">
+      <section className="relative w-full h-screen flex flex-col justify-end text-white mt-10 lg:mt-20 max-h-[900px]">
         <Image
           src="/placeholder.png" // Replace with actual image
           alt="Featured Blog"
@@ -75,7 +75,8 @@ export default function BlogPage() {
         <div className="bg-black/50 w-full h-full absolute top-0 left-0 z-0" />
         <div className="relative z-10 max-w-5xl px-6 lg:px-[105px] pb-12">
           <h1 className="text-[30px] lg:text-[50px] font-bold max-w-2xl">
-            How to Listen to Your Body: Understanding Hunger, Cravings & Fullness
+          Integrative Nutrition: 
+          A new way of life
           </h1>
           <p className="mt-2 max-w-xl">
             Explore ways to improve your relationship with food and your body.

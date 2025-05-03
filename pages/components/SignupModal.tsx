@@ -18,66 +18,29 @@ export default function SignupPopup() {
   }, []);
   
 
-  // Trigger modal after user scrolls past 400px
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const scrollY = window.scrollY;
-
-  //     if (scrollY > 400 && !sessionStorage.getItem("popupDismissed")) {
-  //       setShowPopup(true);
-  //       window.removeEventListener("scroll", handleScroll); // Prevent repeated triggers
-  //     }
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // }, []);
-
-  // Close on outside click
-  // useEffect(() => {
-  //   const handleClickOutside = (e: MouseEvent) => {
-  //     if (
-  //       popupRef.current &&
-  //       e.target instanceof Node &&
-  //       !popupRef.current.contains(e.target)
-  //     ) {
-  //       setShowPopup(false);
-  //       sessionStorage.setItem("popupDismissed", "true"); // Avoid showing again
-  //     }
-  //   };
-
-  //   if (showPopup) {
-  //     document.addEventListener("mousedown", handleClickOutside);
-  //   }
-
-  //   return () => {
-  //     document.removeEventListener("mousedown", handleClickOutside);
-  //   };
-  // }, [showPopup]);
-
   if (!showPopup) return null;
   return (
-    <div className="fixed inset-0 bg-white bg-opacity-50 z-[1000] flex justify-center items-center px-4">
+    <div className="fixed inset-0 bg-gray/30 backdrop-blur-sm z-[1000] flex justify-center items-center px-4">
       
       {/* Background container: Image + Gray Box */}
       
-      <div className="relative w-full max-w-5xl h-[90vh] flex flex-col md:flex-row overflow-hidden rounded-xl">
+      <div className="relative w-full max-w-[900px] h-[700px] flex flex-col md:flex-row overflow-hidden rounded-xl">
         {/* Left Image */}
-        <div className="w-full md:w-2/3 h-1/2 md:h-full">
+        <div className="w-full md:w-[60%] h-1/2 md:h-full">
           <Image
             src="/signupmodal.png"
             alt="Healthy Food"
-            width={500}
+            width={400}
             height={900}
             className="object-cover w-full h-full static"
           />
         </div>
   
         {/* Right Gray Box */}
-        <div className="w-full md:w-1/3 h-1/2 md:h-full bg-gray-50" />
+        <div className="w-full md:w-[40%] h-1/2 md:h-full bg-gray-50" />
   
         {/* Floating Form */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white p-6 md:p-10 rounded-xl shadow-lg w-[90%] max-w-md z-10">
+        <div className="absolute top-[55%] lg:top-1/2 left-1/2 lg:left-[65%] -translate-x-1/2 -translate-y-1/2 bg-white p-6 md:p-10 rounded-xl shadow-lg w-[340px] lg:w-[90%] max-w-md z-10">
           {/* Close Button */}
           <button
             onClick={() => {
@@ -90,7 +53,7 @@ export default function SignupPopup() {
             &times;
           </button>
   
-          <h3 className="text-xl md:text-2xl font-semibold text-green-800 mb-2">
+          <h3 className="text-xl md:text-2xl font-semibold text-primary-main mb-2">
             Being healthy doesn’t have to be hard
           </h3>
           <p className="text-sm text-gray-600 mb-4">
@@ -100,7 +63,7 @@ export default function SignupPopup() {
   
           <form className="space-y-3">
             <div>
-              <label className="block text-sm font-medium">Name</label>
+              <label className="block text-sm font-semibold text-primary-main mb-1">Name</label>
               <input
                 type="text"
                 className="w-full px-3 py-2 border rounded"
@@ -108,7 +71,7 @@ export default function SignupPopup() {
               />
             </div>
             <div>
-              <label className="block text-sm font-medium">Email</label>
+              <label className="block text-sm font-semibold text-primary-main mb-1">Email</label>
               <input
                 type="email"
                 className="w-full px-3 py-2 border rounded"
@@ -116,7 +79,7 @@ export default function SignupPopup() {
               />
             </div>
             <div>
-              <label className="block text-sm font-medium">Phone</label>
+              <label className="block text-sm font-semibold text-primary-main mb-1">Phone</label>
               <input
                 type="tel"
                 className="w-full px-3 py-2 border rounded"
@@ -124,7 +87,7 @@ export default function SignupPopup() {
               />
             </div>
             <div>
-              <label className="block text-sm font-medium">Leave us a message</label>
+              <label className="block text-sm font-semibold text-primary-main mb-1">Leave us a message</label>
               <textarea
                 className="w-full px-3 py-2 border rounded"
                 placeholder="Please type your message here..."
@@ -132,7 +95,7 @@ export default function SignupPopup() {
             </div>
             <button
               type="submit"
-              className="bg-green-700 text-white px-6 py-2 rounded hover:bg-green-800"
+              className="bg-primary-main text-white px-6 py-2 rounded hover:bg-green-800"
             >
               Sign up
             </button>
