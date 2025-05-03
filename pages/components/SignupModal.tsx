@@ -32,7 +32,8 @@ export default function SignupPopup() {
             alt="Healthy Food"
             width={400}
             height={900}
-            className="object-cover w-full h-full static"
+            priority
+            className="object-cover w-full h-full "
           />
         </div>
   
