@@ -6,25 +6,27 @@ const About = () => {
     <section className="flex flex-col lg:flex-row gap-12 xl:gap-[154px] mt-20 lg:mt-30 mb-6 lg:mb-10 justify-center px-4 lg:px-[120px] ">
       <div className="max-w-3xl text-center lg:text-left ">
         <h2 className="xl:text-5xl text-2xl tracking-wide font-semibold text-black p-0 lg:leading-15 ">
-          Meet Abby: The Coach Who Puts Your health First
+          Meet Health Coach Abby
         </h2>
         <div className="lg:max-w-[528px] mt-6 text-default text-lg tracking-tight mb-10 ">
           <p className="mb-4">
-            Hi, I’m Abimbola—call me Health Coach Abby! Based in Lagos, Nigeria,
-            I’m a mom of two whose personal health journey inspired me to help
-            others. After battling my own health challenges, I discovered the
-            power of integrative nutrition and sustainable lifestyle shifts.
+            Hi, I’m Abimbola Afolabi, but most people know me as Health Coach
+            Abby. I’m here to support professional women like you on your
+            journey toward balance, clarity, and authentic success.
+          </p>
+          <p className="mb-4">
+            I offer tailored coaching that focuses on what matters most to you,
+            whether fostering work-life balance, redefining success, or
+            regaining a sense of purpose.
           </p>
           <p>
-            Now, as a certified Integrative Nutrition Health Coach, I work with
-            you to create personalized, practical wellness strategies that fit
-            your unique life. Together, we’ll focus on more than just food—we’ll
-            build a balanced, healthy lifestyle that empowers you to thrive
+            My mission is to help you reconnect with that inner strength,
+            transform it into a driving force, and create the life you deserve.
           </p>
         </div>
 
         <button className="px-6 py-3 bg-primary-main text-white rounded-lg">
-          <Link href="/about">Learn more about Abby</Link>
+          <Link href="/about">Learn more about Coach Abby</Link>
         </button>
       </div>
       <Image

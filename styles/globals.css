@@ -3,7 +3,7 @@
 
 
 :root {
-  --color-primary-main: #53793C;
+  --color-primary-main: #004D40;
   --color-primary-light: #E3EDDA;
   --color-primary-lighter: #F2F7EE;
 
@@ -43,6 +43,28 @@ body {
 .react-datepicker-wrapper {
   display: block !important;
 }
+
+.react-datepicker__current-month {
+  font-size: 1.125rem; /* lg */
+  font-weight: 600;
+  color: #111827; /* Tailwind gray-900 */
+  margin-bottom: 0.5rem;
+}
+
+.react-datepicker__navigation {
+  top: 16px;
+}
+
+.react-datepicker__day-names {
+  margin-bottom: 0.5rem;
+}
+
+.react-datepicker__day-name {
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: #4B5563; /* Tailwind gray-600 */
+}
+
 
 
 /* 

@@ -183,7 +183,7 @@ export default function Consultation() {
               </p>
               <div className="grid grid-cols-2 gap-4 mt-10">
                 {/* Date Picker */}
-                <div className="w-full flex flex-col gap-4">
+                {/* <div className="w-full flex flex-col gap-4">
                   <label className="block text-gray-700 font-medium">
                     Select Preferred Date
                   </label>
@@ -204,7 +204,29 @@ export default function Consultation() {
                     popperPlacement="bottom-start"
                     popperClassName="!z-50"
                   />
-                </div>
+                </div> */}
+<div className="w-full flex flex-col gap-4">
+  <label className="block text-gray-700 font-medium">
+    Select Preferred Date
+  </label>
+  <DatePicker
+    selected={selectedDate}
+    onChange={(date) => setSelectedDate(date)}
+    dateFormat="MMMM d, yyyy"
+    placeholderText="Select date"
+    className="w-full px-4 py-3 bg-[#F6F6F6] border border-[#F6F6F6] rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-main"
+    calendarClassName="!w-[420px] bg-white shadow-xl p-6 rounded-2xl border border-gray-100"
+    dayClassName={(date) =>
+      `text-gray-700 text-sm font-medium hover:bg-primary-light transition-all duration-200
+       w-12 h-12 rounded-full flex items-center justify-center
+       ${selectedDate?.toDateString() === date.toDateString() ? "bg-primary-main text-white" : ""}`
+    }
+    popperPlacement="bottom-start"
+    popperClassName="!z-50"
+  />
+</div>
+
+
 
                 {/* Time Selection */}
                 <div className="flex flex-col gap-4">
@@ -227,12 +249,14 @@ export default function Consultation() {
             </div>
 
             {/* Submit Button */}
-            <button
-              type="submit"
-              className="w-[198px] h-[52px] mt-10 lg:mt-[100px] bg-primary-main text-white py-2 rounded-lg hover:bg-green-700 transition"
-            >
-              Book your consultation
-            </button>
+            <div className="flex justify-center mt-100 ">
+              <button
+                type="submit"
+                className="w-[198px] h-[52px] bg-primary-main text-white py-2 rounded-lg hover:bg-green-700 transition"
+              >
+                Book your consultation
+              </button>
+            </div>
           </form>
         </div>
       </div>

@@ -19,14 +19,14 @@ const Navbar = () => {
           {/* Logo */}
           <Link href="/">
             <Image
-              src="/Logo.svg"
+              src="/Beatrix-logo.svg"
               className="hidden lg:block"
               alt={"logo"}
               width={60}
               height={37.2}
             />
             <Image
-              src="/Logo.svg"
+              src="/Beatrix-logo.svg"
               className="block lg:hidden"
               alt={"logo"}
               width={48}
@@ -40,9 +40,9 @@ const Navbar = () => {
               href="/"
               className={`${
                 router.pathname === "/"
-                  ? "text-[#53793C] font-semibold"
+                  ? "text-[#004D40] font-semibold"
                   : "text-[#6D6D6D]"
-              } hover:text-[#53793C]`}
+              } hover:text-[#004D40]`}
             >
               Home
             </Link>
@@ -50,9 +50,9 @@ const Navbar = () => {
               href="/about"
               className={`${
                 router.pathname === "/about"
-                  ? "text-[#53793C] font-semibold"
+                  ? "text-[#004D40] font-semibold"
                   : "text-[#6D6D6D]"
-              } hover:text-[#53793C]`}
+              } hover:text-[#004D40]`}
             >
               About
             </Link>
@@ -61,9 +61,9 @@ const Navbar = () => {
               href="/resources"
               className={`${
                 router.pathname === "/resources"
-                  ? "text-[#53793C] font-semibold"
+                  ? "text-[#004D40] font-semibold"
                   : "text-[#6D6D6D]"
-              } hover:text-[#53793C]`}
+              } hover:text-[#004D40]`}
             >
               Resources
             </Link>
@@ -72,9 +72,9 @@ const Navbar = () => {
               href="/blog"
               className={`${
                 router.pathname.startsWith("/blog")
-                  ? "text-[#53793C] font-semibold"
+                  ? "text-[#004D40] font-semibold"
                   : "text-[#6D6D6D]"
-              } hover:text-[#53793C]`}
+              } hover:text-[#004D40]`}
             >
               Blog
             </Link>
@@ -89,8 +89,8 @@ const Navbar = () => {
               </button>
             )}
 
-            <button className="bg-primary-main text-base text-white items-center justify-center rounded-lg w-[83px] h-[52px] ">
-              <Link href="/contact">Contact</Link>
+            <button className="bg-primary-main text-base text-white items-center justify-center rounded-lg py-2 w-[169px] h-[56px] ">
+              <Link href="/contact">Talk to Coach Abby</Link>
             </button>
           </div>
 
@@ -141,25 +141,25 @@ const Navbar = () => {
             <div className="flex flex-col items-center space-y-20">
               <Link
                 href="/"
-                className="block text-gray-700 hover:text-[#53793C] active:text-[#53793C]"
+                className="block text-gray-700 hover:text-[#004D40] active:text-[#004D40]"
               >
                 Home
               </Link>
               <Link
                 href="/about"
-                className="block text-gray-700 hover:text-[#53793C] active:text-[#53793C]"
+                className="block text-gray-700 hover:text-[#004D40] active:text-[#004D40]"
               >
                 About
               </Link>
               <Link
                 href="/resources"
-                className="block text-gray-700 hover:text-[#53793C] active:text-[#53793C]"
+                className="block text-gray-700 hover:text-[#004D40] active:text-[#004D40]"
               >
                 Resources
               </Link>
               <Link
                 href="/blog"
-                className="block text-gray-700 hover:text-[#53793C] active:text-[#53793C]"
+                className="block text-gray-700 hover:text-[#004D40] active:text-[#004D40]"
               >
                 Blog
               </Link>
@@ -168,7 +168,7 @@ const Navbar = () => {
             {/* Contact Button */}
             <div className="mt-20">
               <button className="bg-primary-main text-base text-white items-center justify-center rounded-lg w-full h-10 ">
-                <Link href="/contact">Contact</Link>
+                <Link href="/contact">Talk to Coach Abby</Link>
               </button>
             </div>
           </div>

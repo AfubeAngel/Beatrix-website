@@ -3,35 +3,33 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <section className="flex flex-col lg:flex-row gap-12 xl:gap-[154px] mt-10 lg:mt-20 mb-6 lg:mb-10 justify-center px-4 lg:px-[120px] ">
-    <div className="max-w-3xl text-center lg:text-left ">
-      <h2 className="xl:text-[64px] text-black text-[36px] tracking-wide font-semibold p-0 xl:leading-20 ">
-        Transform your Health with Personalized Wellness Coaching
-      </h2>
-      <p className="lg:max-w-[528px] mt-4 text-default text-[20px] tracking-tight">
-        Beatrix helps high-achieving professionals find sustainable health
-        solutions that work for their unique lives. Together, we simplify
-        wellness, so you can focus on what matters most.
-      </p>
-      <div className="flex flex-col md:flex-row gap-4 justify-center lg:justify-start mt-5 lg:mt-10 ">
-        <button className="px-6 py-3 bg-primary-main text-white rounded-lg">
-          <Link href="/consultation" >
-          Book Consultation
-          </Link>
-        </button>
-        <button className="px-6 py-3 text-[#162211] font-medium border-[2px] border-[#53793C] bg-white rounded-lg">
-        <Link href="/#" >Book Health Coaching</Link>
-        </button>
+    <section className="flex flex-col lg:flex-row gap-12 xl:gap-[154px] mt-10 lg:mt-20 mb-6 lg:mb-[100px] justify-center px-4 lg:px-[120px] ">
+      <div className="max-w-3xl text-center lg:text-left ">
+        <h2 className="xl:text-[56px] text-black text-[28px] tracking-tight font-semibold p-0 xl:leading-15 ">
+          Empowering Professional Women to Thrive Through Balance,
+          Self-Awareness and Sustainable Wellness
+        </h2>
+        <p className="lg:max-w-[707px] mt-4 text-default text-[20px] tracking-normal">
+          I guide ambitious women through stress, self-doubt, and burnout with
+          holistic support tailored to their lives. Whether through one-on-one
+          coaching, group sessions, or workshops, my mission is to help you
+          reconnect with your strength, find clarity, and step into the
+          confident, unstoppable version of yourself at work, home, and within.
+        </p>
+        <div className="flex flex-col md:flex-row gap-4 justify-center lg:justify-start mt-5 lg:mt-8 ">
+          <button className="px-6 py-3 bg-primary-main text-white rounded-lg">
+            <Link href="/consultation">Book Consultation</Link>
+          </button>
+        </div>
       </div>
-    </div>
       <Image
         src="/hero-image.jpg"
         alt="Coach"
-        width={400}
-        height={433}
-        className="w-full lg:max-w-[400px] h-[433px] "
+        width={500}
+        height={536}
+        className="w-full lg:max-w-[500px] h-[536px] "
       />
-  </section>
+    </section>
   );
 };
 
