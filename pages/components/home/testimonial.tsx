@@ -42,42 +42,35 @@ export default function Testimonials() {
         What Our Clients Say
       </h2>
 
-      {/* Desktop View - Shows Two Testimonials Side by Side */}
-      <div className="hidden md:flex bg-primary-lighter p-20 rounded-lg relative">
-        {/* Left Testimonial */}
-        <div className="w-1/2 pr-6 border-r border-gray-300">
-          <p className="text-lg italic">“{testimonials[index].text}”</p>
-          <p className="mt-4 text-primary-main font-bold">{testimonials[index].name}</p>
-          <p className="text-[#7C7C7C]">{testimonials[index].role}</p>
-        </div>
+      {/* Desktop View */}
+<div className="hidden md:flex justify-center items-center px-4">
+  <div className="bg-primary-main rounded-[20px] lg:py-[65px] lg:px-[133px] py-12 px-8 max-w-3xl w-full flex flex-col items-center text-center relative">
+    <p className="text-lg lg:text-xl text-white leading-relaxed tracking-tight max-w-2xl">
+      “{testimonials[index].text}”
+    </p>
 
-        {/* Right Testimonial (Next Item in Array) */}
-        <div className="w-1/2 pl-6">
-          <p className="text-lg italic">
-            “{testimonials[(index + 1) % testimonials.length].text}”
-          </p>
-          <p className="mt-4 text-primary-main font-bold">
-            {testimonials[(index + 1) % testimonials.length].name}
-          </p>
-          <p className="text-[#7C7C7C]">
-            {testimonials[(index + 1) % testimonials.length].role}
-          </p>
-        </div>
+    {/* Name and Role */}
+    <p className="mt-2 text-white font-bold">{testimonials[index].name}</p>
+    <p className="text-white">{testimonials[index].role}</p>
 
-        {/* Navigation Arrows */}
-        <button
-          onClick={prevTestimonial}
-          className="absolute left-4 transform p-3 "
-        >
-          <Image src="/left-arrow.svg" alt="left-arrow" width={20} height={20} />
-        </button>
-        <button
-          onClick={nextTestimonial}
-          className="absolute right-4 transform p-3 "
-        >
-          <Image src="/right-arrow.svg" alt="right-arrow" width={20} height={20} />
-        </button>
-      </div>
+    {/* Navigation Arrows */}
+    <button
+      onClick={prevTestimonial}
+      className="absolute lg:left-[-50px] xl:left-[-200px] top-1/2 -translate-y-1/2 flex justify-center items-center w-10 h-10 rounded-full border border-primary-main"
+    >
+      <Image src="/left-arrow.svg" alt="left-arrow" width={10} height={10} />
+    </button>
+
+    <button
+      onClick={nextTestimonial}
+      className="absolute lg:right-[-50px] xl:right-[-200px] top-1/2 -translate-y-1/2 flex justify-center items-center w-10 h-10 rounded-full border border-primary-main"
+    >
+      <Image src="/right-arrow.svg" alt="right-arrow" width={10} height={10} />
+    </button>
+  </div>
+</div>
+
+
 
       {/* Mobile View - Shows One Testimonial with Arrows */}
       <div className="relative md:hidden bg-primary-lighter p-6 rounded-lg">

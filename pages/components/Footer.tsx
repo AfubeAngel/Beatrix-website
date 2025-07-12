@@ -10,12 +10,18 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Left Side */}
           <div>
-            <Image src="/logo.svg" alt="Beatrix Logo" width={100} height={50} />
+            <Image
+              src="/Beatrix-logo.svg"
+              alt="Beatrix Logo"
+              width={60}
+              height={46}
+            />
             <p className="mt-4 text-sm">
               Integrative Nutrition & Health Coach
               <br />
-              Helping you achieve optimal wellness through personalized
-              nutrition and lifestyle guidance.
+              Helping you achieve optimal wellness through
+              <br />
+              personalized nutrition and lifestyle guidance.
             </p>
             <nav className="mt-4 flex space-x-6 text-sm">
               <Link href="/">Home</Link>

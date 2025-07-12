@@ -40,9 +40,9 @@ const Navbar = () => {
               href="/"
               className={`${
                 router.pathname === "/"
-                  ? "text-[#004D40] font-semibold"
+                  ? "text-[#4A7A8C] font-semibold"
                   : "text-[#6D6D6D]"
-              } hover:text-[#004D40]`}
+              } hover:text-[#4A7A8C]`}
             >
               Home
             </Link>
@@ -50,9 +50,9 @@ const Navbar = () => {
               href="/about"
               className={`${
                 router.pathname === "/about"
-                  ? "text-[#004D40] font-semibold"
+                  ? "text-[#4A7A8C] font-semibold"
                   : "text-[#6D6D6D]"
-              } hover:text-[#004D40]`}
+              } hover:text-[#4A7A8C]`}
             >
               About
             </Link>
@@ -61,9 +61,9 @@ const Navbar = () => {
               href="/resources"
               className={`${
                 router.pathname === "/resources"
-                  ? "text-[#004D40] font-semibold"
+                  ? "text-[#4A7A8C] font-semibold"
                   : "text-[#6D6D6D]"
-              } hover:text-[#004D40]`}
+              } hover:text-[#4A7A8C]`}
             >
               Resources
             </Link>
@@ -72,9 +72,9 @@ const Navbar = () => {
               href="/blog"
               className={`${
                 router.pathname.startsWith("/blog")
-                  ? "text-[#004D40] font-semibold"
+                  ? "text-[#4A7A8C] font-semibold"
                   : "text-[#6D6D6D]"
-              } hover:text-[#004D40]`}
+              } hover:text-[#4A7A8C]`}
             >
               Blog
             </Link>
@@ -141,25 +141,25 @@ const Navbar = () => {
             <div className="flex flex-col items-center space-y-20">
               <Link
                 href="/"
-                className="block text-gray-700 hover:text-[#004D40] active:text-[#004D40]"
+                className="block text-gray-700 hover:text-[#4A7A8C] active:text-[#4A7A8C]"
               >
                 Home
               </Link>
               <Link
                 href="/about"
-                className="block text-gray-700 hover:text-[#004D40] active:text-[#004D40]"
+                className="block text-gray-700 hover:text-[#4A7A8C] active:text-[#4A7A8C]"
               >
                 About
               </Link>
               <Link
                 href="/resources"
-                className="block text-gray-700 hover:text-[#004D40] active:text-[#004D40]"
+                className="block text-gray-700 hover:text-[#4A7A8C] active:text-[#4A7A8C]"
               >
                 Resources
               </Link>
               <Link
                 href="/blog"
-                className="block text-gray-700 hover:text-[#004D40] active:text-[#004D40]"
+                className="block text-gray-700 hover:text-[#4A7A8C] active:text-[#4A7A8C]"
               >
                 Blog
               </Link>

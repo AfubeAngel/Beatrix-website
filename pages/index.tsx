@@ -4,7 +4,7 @@
 import About from "./components/home/about";
 import Approach from "./components/home/approach/approach";
 import BlogSection from "./components/home/blogSection";
-import Explore from "./components/home/explore";
+//import Explore from "./components/home/explore";
 import SubFooter from "./components/home/footer-sub";
 import Hero from "./components/home/hero";
 import Offer from "./components/home/offer";
@@ -12,6 +12,7 @@ import SubHero from "./components/home/sub-hero";
 import Testimonials from "./components/home/testimonial";
 import Navbar from "./components/Navbar";
 import SignupPopup from "./components/SignupModal";
+
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -25,14 +26,14 @@ import SignupPopup from "./components/SignupModal";
 
 export default function Home() {
   return (
-    <div>
+    <div >
       <Navbar />
       <Hero />
       <SubHero />
       <Offer />
       <About />
       <Approach />
-      <Explore />
+      {/* <Explore /> */}
       <Testimonials />
       <BlogSection />
       <SubFooter />

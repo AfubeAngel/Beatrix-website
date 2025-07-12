@@ -62,12 +62,12 @@ export default function BlogSection() {
         </div>
 
         {/* Button to View All Posts */}
-        <button className="mt-10 lg:mt-20 text-center flex items-center justify-self-center w-[150px] h-13 ">
+        <button className="mt-10 lg:mt-20 text-center flex items-center justify-self-center w-[221px] h-14 ">
           <Link
             href="/blog"
-            className="bg-primary-main text-white py-4 px-3 rounded-md flex gap-1"
+            className="bg-primary-main text-white py-4 px-3 rounded-2xl flex gap-1 w-auto h-full items-center justify-center"
           >
-            View all posts
+            View all Blog posts
               <Image
                 src="/rightthin-arrow.svg"
                 width={24}
