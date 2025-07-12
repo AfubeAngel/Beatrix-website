@@ -35,6 +35,10 @@ body {
   background-color: var(--color-secondary-main);
 }
 
+.border-primary-main {
+  border-color: var(--color-primary-main);
+}
+
 .text-primary-main {
   color: var(--color-primary-main);
 }
