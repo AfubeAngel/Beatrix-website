@@ -5,15 +5,15 @@ import { useRouter } from "next/router";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [searchOpen, setSearchOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState("");
+  // const [searchOpen, setSearchOpen] = useState(false);
+  // const [searchQuery, setSearchQuery] = useState("");
   const router = useRouter();
 
   // Check if the current route is the blog page or an article page
-  const isBlogPage = router.pathname.startsWith("/blog");
+ // const isBlogPage = router.pathname.startsWith("/blog");
 
   return (
-    <nav className="bg-white mt-3 lg:mt-[29px] w-full z-50 px-4 lg:px-[105px]">
+    <nav className="bg-white w-full z-50 px-4 py-3 lg:py-[22px] lg:px-[105px]">
       <div className="max-w-7xl mx-auto ">
         <div className="flex justify-between items-center ">
           {/* Logo */}
@@ -56,7 +56,7 @@ const Navbar = () => {
             >
               About
             </Link>
-
+{/* 
             <Link
               href="/resources"
               className={`${
@@ -66,7 +66,7 @@ const Navbar = () => {
               } hover:text-[#4A7A8C]`}
             >
               Resources
-            </Link>
+            </Link> */}
 
             <Link
               href="/blog"
@@ -80,16 +80,16 @@ const Navbar = () => {
             </Link>
 
             {/* Search Icon for Blog Pages */}
-            {isBlogPage && (
+            {/* {isBlogPage && (
               <button
                 onClick={() => setSearchOpen(!searchOpen)}
                 className="cursor-pointer flex justify-center w-10 h-10 lg:w-[50px] lg:h-[50px] rounded-[50%] border border-[#E7E7E7] bg-[#F6F6F6] "
               >
                 <Image src="/Search.svg" alt="Search" width={24} height={24} />
               </button>
-            )}
+            )} */}
 
-            <button className="bg-primary-main text-base text-white items-center justify-center rounded-lg py-2 w-[169px] h-[56px] ">
+            <button className="bg-primary-main text-base text-white items-center justify-center rounded-2xl py-2 w-[169px] h-[56px] ">
               <Link href="/contact">Talk to Coach Abby</Link>
             </button>
           </div>
@@ -109,7 +109,7 @@ const Navbar = () => {
         </div>
 
         {/* Search Bar (Only for Blog Pages) */}
-        {isBlogPage && searchOpen && (
+        {/* {isBlogPage && searchOpen && (
           <div className="mt-4 flex justify-center">
             <input
               type="text"
@@ -119,7 +119,7 @@ const Navbar = () => {
               className="border border-gray-300 rounded-lg p-2 w-full max-w-md"
             />
           </div>
-        )}
+        )} */}
       </div>
 
       {/* Mobile Menu Overlay */}
@@ -151,12 +151,12 @@ const Navbar = () => {
               >
                 About
               </Link>
-              <Link
+              {/* <Link
                 href="/resources"
                 className="block text-gray-700 hover:text-[#4A7A8C] active:text-[#4A7A8C]"
               >
                 Resources
-              </Link>
+              </Link> */}
               <Link
                 href="/blog"
                 className="block text-gray-700 hover:text-[#4A7A8C] active:text-[#4A7A8C]"

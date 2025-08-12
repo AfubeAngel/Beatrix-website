@@ -1,6 +1,6 @@
 export default function FAQ() {
     return (
-      <div className="mt-12 grid grid-col-1 lg:grid-cols-2">
+      <div className="mt-12 lg:mt-24 grid grid-col-1 ">
         <h2 className="text-2xl lg:text-[48px] font-semibold">Frequently Asked Questions</h2>
 
         <div className="mt-4 space-y-4">
