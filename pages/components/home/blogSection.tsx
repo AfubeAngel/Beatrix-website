@@ -29,7 +29,7 @@ export default function BlogSection() {
   return (
     <section className="mt-20 lg:mt-[100px] px-4 lg:px-[120px] ">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-2xl font-bold mb-6">
+        <h2 className="text-[28px] lg:text-[48px] font-bold mb-6">
           Explore Our Blog for Wellness Tips
         </h2>
 

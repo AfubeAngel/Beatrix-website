@@ -48,7 +48,7 @@ export default function SignupPopup() {
               setShowPopup(false);
               sessionStorage.setItem("popupDismissed", "true");
             }}
-            className="absolute top-3 right-3 text-gray-600 hover:text-gray-800 text-xl z-10"
+            className="absolute top-3 right-3 text-gray-600 cursor-pointer hover:text-gray-800 text-5xl z-10"
             aria-label="Close"
           >
             &times;
@@ -84,7 +84,7 @@ export default function SignupPopup() {
               <input
                 type="tel"
                 className="w-full px-3 py-2 border rounded"
-                placeholder="e.g. (123) 456-7890"
+                placeholder="e.g. +234 567 890 8998"
               />
             </div>
             <div>

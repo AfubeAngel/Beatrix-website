@@ -60,14 +60,14 @@ export default function ApproachImages() {
       {/* desktop slide */}
       <div className="hidden md:block w-full">
         <div ref={sliderRef} className="splide w-full">
-          <div className="splide__track">
+          <div className="splide__track pb-5">
             <ul className="splide__list ">
               {cardData.map((data, index) => (
                 <li
                   key={index}
-                  className="splide__slide bg-white rounded-2xl shadow-sm p-5 hover:shadow-md transition lg:p-10 max-w-[757px] h-auto"
+                  className="splide__slide rounded-2xl border-2 border-[#EFEFEF] shadow-lg p-5 hover:shadow-md transition lg:p-10 max-w-[757px] h-[300px]  "
                 >
-                  <div className="flex gap-10 ">
+                  <div className="flex gap-10">
                   <Image
                     src={data.icon}
                     width={318}

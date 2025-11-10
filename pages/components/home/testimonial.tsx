@@ -38,8 +38,8 @@ export default function Testimonials() {
   return (
     <section className="mt-20 lg:mt-[100px]  px-4 lg:px-[120px] ">
       <div className="max-w-7xl mx-auto">
-      <h2 className="text-[24px] lg:text-[48px] font-semibold mb-6">
-        What Our Clients Say
+      <h2 className="text-[24px] lg:text-[48px] text-center font-semibold mb-6">
+       Hear from the People I’ve Coached
       </h2>
 
       {/* Desktop View */}

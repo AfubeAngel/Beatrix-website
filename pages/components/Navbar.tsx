@@ -89,7 +89,7 @@ const Navbar = () => {
               </button>
             )} */}
 
-            <button className="bg-primary-main text-base text-white items-center justify-center rounded-2xl py-2 w-[169px] h-[56px] ">
+            <button className="bg-primary-main text-base cursor-pointer text-white items-center justify-center rounded-2xl py-2 w-[169px] h-[56px] ">
               <Link href="/contact">Talk to Coach Abby</Link>
             </button>
           </div>
@@ -167,7 +167,7 @@ const Navbar = () => {
 
             {/* Contact Button */}
             <div className="mt-20">
-              <button className="bg-primary-main text-base text-white items-center justify-center rounded-lg w-full h-10 ">
+              <button className="bg-primary-main text-base cursor-pointer text-white items-center justify-center rounded-lg w-full h-10 ">
                 <Link href="/contact">Talk to Coach Abby</Link>
               </button>
             </div>
