@@ -397,7 +397,7 @@ export default function WomenHealthForm() {
                   Comprehensive questionnaire covering nutritional needs, health
                   history, and men-specific wellness
                 </p>
-                <button className="mt-10 bg-primary-main text-white px-4 py-2 rounded-[10px] hover:bg-green-700">
+                <button className="mt-10 bg-primary-main cursor-pointer text-white px-4 py-2 rounded-[10px] hover:bg-green-700">
                   <Link href="/menhealth">Complete assessment form</Link>
                 </button>
               </div>
@@ -407,7 +407,7 @@ export default function WomenHealthForm() {
           {/* Submit */}
           <button
             type="submit"
-            className="bg-primary-main text-white px-6 py-2 rounded hover:bg-green-800"
+            className="bg-primary-main cursor-pointer text-white px-6 py-2 rounded hover:bg-green-800"
           >
             Submit
           </button>

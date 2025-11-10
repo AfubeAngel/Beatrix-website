@@ -96,7 +96,7 @@ export default function SignupPopup() {
             </div>
             <button
               type="submit"
-              className="bg-primary-main text-white px-6 py-2 rounded hover:bg-green-800"
+              className="bg-primary-main cursor-pointer text-white px-6 py-2 rounded hover:bg-green-800"
             >
               Sign up
             </button>

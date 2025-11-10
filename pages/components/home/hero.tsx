@@ -16,8 +16,8 @@ const Hero = () => {
           reconnect with your strength, find clarity, and step into the
           confident, unstoppable version of yourself at work, home, and within.
         </p>
-        <div className="flex flex-col md:flex-row gap-4 justify-center lg:justify-start mt-5 lg:mt-10 w-full">
-          <button className="px-6 py-3 bg-primary-main text-white rounded-2xl w-[200px] mx-auto md:mx-0 md:w-auto">
+        <div className="flex flex-col md:flex-row gap-4 justify-center lg:justify-start mt-5 lg:mt-10 w-full ">
+          <button className="px-6 py-3 bg-primary-main text-white rounded-2xl w-[200px] mx-auto md:mx-0 md:w-auto hover:bg-green-700 transition">
             <Link href="/consultation">Book Consultation</Link>
           </button>
         </div>

@@ -25,7 +25,7 @@ const About = () => {
           </p>
         </div>
 
-        <button className="px-6 py-3 bg-primary-main text-white rounded-lg">
+        <button className="px-6 py-3 cursor-pointer bg-primary-main text-white rounded-lg">
           <Link href="/about">Learn more about Coach Abby</Link>
         </button>
       </div>

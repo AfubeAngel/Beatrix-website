@@ -50,7 +50,7 @@ export default function ArticlePage() {
             </div>
           </div>
 
-          <button className="bg-primary-main text-white px-6 py-2 rounded-lg text-sm hover:bg-green-700 transition">
+          <button className="bg-primary-main cursor-pointer text-white px-6 py-2 rounded-lg text-sm hover:bg-green-700 transition">
             Share
           </button>
         </div>

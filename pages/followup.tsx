@@ -291,7 +291,7 @@ export default function FollowUpConsultation() {
             <div className="flex justify-center mt-8">
             <button
               type="submit"
-              className="w-[121px] h-[52px] bg-primary-main text-white py-2 rounded-lg hover:bg-green-700 transition"
+              className="w-[121px] h-[52px] bg-primary-main cursor-pointer text-white py-2 rounded-lg hover:bg-green-700 transition"
             >
               {loading ? "Submitting..." : "Submit form"}
             </button>
@@ -311,7 +311,7 @@ export default function FollowUpConsultation() {
             <p className="text-gray-600 mt-2">
             Comprehensive questionnaire covering nutritional needs, health history, and women-specific wellness
             </p>
-            <button className="mt-10 bg-primary-main text-white px-4 py-2 rounded-[10px] hover:bg-green-700">
+            <button className="mt-10 bg-primary-main cursor-pointer text-white px-4 py-2 rounded-[10px] hover:bg-green-700">
             <Link href="/womenhealth">
             Complete assessment form
             </Link>
@@ -325,7 +325,7 @@ export default function FollowUpConsultation() {
             <p className="text-gray-600 mt-2">
             Comprehensive questionnaire covering nutritional needs, health history, and men-specific wellness
             </p>
-            <button className="mt-10 bg-primary-main text-white px-4 py-2 rounded-[10px] hover:bg-green-700">
+            <button className="mt-10 bg-primary-main cursor-pointer text-white px-4 py-2 rounded-[10px] hover:bg-green-700">
             <Link href="/menhealth">
             Complete assessment form
             </Link>

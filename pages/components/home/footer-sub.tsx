@@ -7,7 +7,7 @@ const SubFooter = () => {
           My mission is to help you reconnect with that inner strength, transform it into a driving force, and create the life you deserve. I’m here to walk with you every step of the way.
 Are you ready to take the first step?
         </p>
-        <button className="text-[#F1F3FB] py-4 rounded-[10px] bg-[#5E6CAE] flex items-center justify-center w-[234px] h-[56px] ">
+        <button className="text-[#F1F3FB] cursor-pointer py-4 rounded-[10px] bg-[#5E6CAE] flex items-center justify-center w-[234px] h-[56px] ">
           <Link className="font-medium text-sm" href="/consultation">Book Consultation</Link></button>
       </div>
     );

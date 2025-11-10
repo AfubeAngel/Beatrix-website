@@ -30,7 +30,7 @@ Please select the type of consultation you need and then fill out the right heal
             <p className="text-gray-600 mt-2">
 For new clients starting their wellness journey or addressing a new health goal
             </p>
-            <button className="mt-10 bg-primary-main text-white px-4 py-2 rounded-[10px] hover:bg-green-700">
+            <button className="mt-10 cursor-pointer bg-primary-main text-white px-4 py-2 rounded-[10px] hover:bg-green-700">
               <Link href="/firstconsultation">
               Book consultation
               </Link>
@@ -44,7 +44,7 @@ For new clients starting their wellness journey or addressing a new health goal
             <p className="text-gray-600 mt-2">
 For existing clients to review progress, adjust plans, and continue your wellness journey
             </p>
-            <button className="mt-10 bg-primary-main text-white px-4 py-2 rounded-[10px] hover:bg-green-700">
+            <button className="mt-10 cursor-pointer bg-primary-main text-white px-4 py-2 rounded-[10px] hover:bg-green-700">
               <Link href="/followup">
               Schedule follow-up consultation
               </Link>
