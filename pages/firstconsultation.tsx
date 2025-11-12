@@ -8,7 +8,7 @@ export default function Consultation() {
   return (
     <>
       <Navbar />
-      <section className=" mt-8 lg:mt-[85px] mx-auto px-4 lg:px-[100px]">
+      <section className=" mt-8 lg:mt-[85px] mx-auto px-4 lg:px-[120px]">
         <div className="flex flex-col items-center gap-4">
           <h2 className="text-[36px] lg:text-[64px] font-semibold text-center leading-18 max-w-3xl">
             First-time consultation
@@ -23,7 +23,7 @@ export default function Consultation() {
         {/* Consultation Cards */}
         <section className="flex flex-col gap-10 mb-20 ">
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-white p-6 rounded-lg ">
+            <div className="bg-white p-6 lg:p-10 rounded-lg shadow-lg border-1 border-gray-100 max-w-[600px] h-[280px] ">
               <h3 className="text-xl font-semibold">Women’s Health Form</h3>
               <p className="text-gray-600 mt-2">
                 Comprehensive questionnaire covering nutritional needs, health
@@ -34,7 +34,7 @@ export default function Consultation() {
               </button>
             </div>
 
-          <div className=" p-6 rounded-lg ">
+          <div className="bg-white p-6 lg:p-10 rounded-lg shadow-lg border-1 border-gray-100 max-w-[600px] h-[280px] ">
             <h3 className="text-xl font-semibold">Men’s Health Form</h3>
             <p className="text-gray-600 mt-2">
               Comprehensive questionnaire covering nutritional needs, health
@@ -47,7 +47,7 @@ export default function Consultation() {
           </div>
         </section>
 
-        <div className="bg-white p-6 rounded-lg mb-[200px]">
+        <div className="bg-white p-6 rounded-lg mb-[200px] lg:p-10 shadow-lg border-1 border-gray-100 w-full h-[280px]">
           <h3 className="text-xl font-semibold">
             Follow-Up Consultation (Revisit)
           </h3>

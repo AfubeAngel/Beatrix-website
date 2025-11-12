@@ -91,7 +91,7 @@ export default function ContactForm() {
       </div>
       <button
         type="submit"
-        className="w-full bg-primary-main cursor-pointer text-white p-3 hover:bg-primary-main transition"
+        className="w-full bg-primary-main rounded-xl cursor-pointer text-white p-3 hover:bg-primary-main transition"
         disabled={loading}
       >
         {loading ? 'Sending...' : 'Send Message'}
