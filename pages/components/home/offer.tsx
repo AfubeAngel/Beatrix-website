@@ -65,7 +65,7 @@ export default function Offer() {
                 regaining a sense of purpose.
               </p>
             </div>
-            <button className="hidden cursor-pointer lg:block bg-primary-main text-white px-6 py-3 w-[302px] h-14 rounded-2xl hover:bg-primary-main">
+            <button className="hidden cursor-pointer lg:block bg-[#4A7A8C] hover:bg-[#185971] text-white px-6 py-3 w-[302px] h-14 rounded-2xl">
               Start Your Wellness Journey
             </button>
           </div>
@@ -126,7 +126,7 @@ export default function Offer() {
             </div>
           </div>
 
-          <button className="block cursor-pointer mx-auto lg:hidden bg-primary-main text-white px-6 py-3 w-[302px] h-14 rounded-2xl hover:bg-primary-main">
+          <button className="block cursor-pointer mx-auto lg:hidden bg-primary-main text-white px-6 py-3 w-[302px] h-14 rounded-2xl">
             Start Your Wellness Journey
           </button>
         </div>

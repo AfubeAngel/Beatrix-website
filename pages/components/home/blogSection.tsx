@@ -65,7 +65,7 @@ export default function BlogSection() {
         <button className="mt-10 lg:mt-20 cursor-pointer text-center flex items-center justify-self-center w-[221px] h-14 ">
           <Link
             href="/blog"
-            className="bg-primary-main text-white py-4 px-3 rounded-2xl flex gap-1 w-auto h-full items-center justify-center"
+            className="bg-[#4A7A8C] hover:bg-[#185971] text-white py-4 px-3 rounded-2xl flex gap-1 w-auto h-full items-center justify-center"
           >
             View all Blog posts
               <Image

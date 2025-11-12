@@ -7,7 +7,7 @@ const blogPosts = [
     title: "Integrative Nutrition: A New Way of Life",
     description:
       "Integrative nutrition combines the principles of traditional nutrition guidelines and functional nutrition",
-    image: "/placeholder.png", // Replace with actuage
+    image: "/placeholder.png", 
     link: "#",
   },
   {
@@ -74,15 +74,15 @@ export default function BlogPage() {
       <Navbar />
 
       {/* Hero / Featured Blog Section */}
-      <section className="relative w-full h-screen flex flex-col justify-end text-white max-h-[900px]">
+      <section className="relative w-full h-screen flex flex-col justify-end text-white max-h-[900px] z-0">
         <Image
           src="/bloghero.png" // Replace with actual image
           alt="Featured Blog"
           fill
           className="absolute inset-0 object-cover -z-10 opacity-300 "
         />
-        <div className="bg-black/50 w-full h-full absolute top-0 left-0 z-0" />
-        <div className="relative flex flex-col gap-4 z-10 pt-[187px] lg:pt-[366px] px-6 lg:px-[105px] pb-12">
+        <div className="bg-black/50 w-full h-full absolute top-0 left-0 z-[1] pointer-events-none" />
+        <div className="relative flex flex-col gap-4 z-10  px-6 lg:px-[105px] pb-12">
           <p className="text-2xl lg:text-[36px] font-semibold tracking-tighter ">
             Featured
           </p>
@@ -96,7 +96,7 @@ export default function BlogPage() {
           </p>
           <Link
             href="#"
-            className="mt-2 lg:mt-0 bg-white text-sm text-black w-[194px] h-[52px] px-2 flex justify-center items-center rounded-2xl hover:bg-green-700 hover:text-white transition"
+            className="mt-2 lg:mt-0 bg-white text-sm text-black w-[194px] h-[52px] px-2 flex justify-center items-center rounded-2xl hover:bg-[#4A7A8C] hover:text-white transition"
           >
             Continue Reading
           </Link>
@@ -110,7 +110,7 @@ export default function BlogPage() {
         </h2>
         <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-8 ">
           {blogPosts.map((post, index) => (
-            <a
+            <Link
               key={index}
               href={post.link}
               className="block bg-white rounded-lg overflow-hidden"
@@ -127,11 +127,11 @@ export default function BlogPage() {
                   {post.title}
                 </h3>
                 <p className="text-base mt-4 mb-6 ">{post.description}</p>
-                <Link href="#" className="text-sm text-blue-600 underline">
+                <span className="text-sm hover:font-bold text-[#4A7A8C] hover:text-[#1c6884] underline">
                   Continue reading
-                </Link>
+                </span>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </section>

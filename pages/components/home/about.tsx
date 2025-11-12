@@ -25,7 +25,7 @@ const About = () => {
           </p>
         </div>
 
-        <button className="px-6 py-3 cursor-pointer bg-primary-main text-white rounded-lg">
+        <button className="px-6 py-3 cursor-pointer bg-[#4A7A8C] hover:bg-[#185971] text-white rounded-lg">
           <Link href="/about">Learn more about Coach Abby</Link>
         </button>
       </div>

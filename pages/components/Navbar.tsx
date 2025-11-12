@@ -5,12 +5,12 @@ import { useRouter } from "next/router";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  // const [searchOpen, setSearchOpen] = useState(false);
-  // const [searchQuery, setSearchQuery] = useState("");
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
   const router = useRouter();
 
   // Check if the current route is the blog page or an article page
- // const isBlogPage = router.pathname.startsWith("/blog");
+ const isBlogPage = router.pathname.startsWith("/blog");
 
   return (
     <nav className="bg-white w-full z-50 px-4 py-3 lg:py-[22px] lg:px-[105px]">
@@ -80,23 +80,35 @@ const Navbar = () => {
             </Link>
 
             {/* Search Icon for Blog Pages */}
-            {/* {isBlogPage && (
+            {isBlogPage && (
               <button
                 onClick={() => setSearchOpen(!searchOpen)}
                 className="cursor-pointer flex justify-center w-10 h-10 lg:w-[50px] lg:h-[50px] rounded-[50%] border border-[#E7E7E7] bg-[#F6F6F6] "
               >
                 <Image src="/Search.svg" alt="Search" width={24} height={24} />
               </button>
-            )} */}
+            )}
 
-            <button className="bg-primary-main text-base cursor-pointer text-white items-center justify-center rounded-2xl py-2 w-[169px] h-[56px] ">
+            <button className="bg-[#4A7A8C] hover:bg-[#094d65] text-base cursor-pointer text-white items-center justify-center rounded-2xl py-2 w-[169px] h-[56px] ">
               <Link href="/contact">Talk to Coach Abby</Link>
             </button>
           </div>
 
           {/* Mobile Menu Button */}
+          <div className="md:hidden flex gap-4">
+
+          {/* Search Icon (Mobile Blog Pages Only) */}
+            {isBlogPage && (
+              <button
+                onClick={() => setSearchOpen(!searchOpen)}
+                className="cursor-pointer flex justify-center items-center w-8 h-8 rounded-full border border-[#E7E7E7] bg-[#F6F6F6]"
+              >
+                <Image src="/Search.svg" alt="Search" width={20} height={20} />
+              </button>
+            )}
+          
           <button
-            className="md:hidden text-green-700"
+            className=" text-green-700"
             onClick={() => setIsOpen(true)}
           >
             <Image
@@ -106,10 +118,11 @@ const Navbar = () => {
               height={24}
             />
           </button>
+          </div>
         </div>
 
         {/* Search Bar (Only for Blog Pages) */}
-        {/* {isBlogPage && searchOpen && (
+        {isBlogPage && searchOpen && (
           <div className="mt-4 flex justify-center">
             <input
               type="text"
@@ -119,7 +132,7 @@ const Navbar = () => {
               className="border border-gray-300 rounded-lg p-2 w-full max-w-md"
             />
           </div>
-        )} */}
+        )}
       </div>
 
       {/* Mobile Menu Overlay */}

@@ -5,6 +5,7 @@
 :root {
   --font-dm-sans: 'DM Sans', sans-serif;
   --color-primary-main: #4A7A8C;
+  --color-primary-hover: #316070;
   --color-primary-light: #E3EDDA;
   --color-primary-lighter: #F2F7EE;
   --color-secondary-main: #EAEDF9;
@@ -24,6 +25,10 @@ body {
 /* Utility classes (optional) */
 .bg-primary-main {
   background-color: var(--color-primary-main);
+}
+.bg-primary-hover {
+  background-color: var(--color-primary-hover);
+  transition: background-color 0.3s ease;
 }
 .bg-primary-light {
   background-color: var(--color-primary-light);
