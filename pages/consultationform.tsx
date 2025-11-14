@@ -4,6 +4,7 @@ import Select, { GroupBase, StylesConfig } from "react-select";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import Navbar from "./components/Navbar";
+import Breadcrumbs from "./components/forms/breadcrumbs";
 
 // Define TypeScript Interface for Form Data
 interface ConsultationFormData {
@@ -74,6 +75,7 @@ export default function Consultation() {
   return (
     <>
       <Navbar />
+      <Breadcrumbs />
       <div className="min-h-screen flex max-w-7xl mx-auto py-10 px-4 lg:px-[150px]">
         <div className="bg-white rounded-lg w-full">
           <h2 className="text-[36px] lg:text-[64px] font-bold text-center mb-4">

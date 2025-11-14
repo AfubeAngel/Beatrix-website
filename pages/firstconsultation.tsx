@@ -3,11 +3,13 @@ import Link from "next/link";
 // import ContactInfo from "./components/contact/contactinfo";
 import FAQ from "./components/contact/faq";
 import Navbar from "./components/Navbar";
+import Breadcrumbs from "./components/forms/breadcrumbs";
 
 export default function Consultation() {
   return (
     <>
       <Navbar />
+      <Breadcrumbs/>
       <section className="flex flex-col mt-8 lg:mt-[85px] mx-auto px-4 lg:px-[120px]">
         <div className="flex flex-col items-center gap-4">
           <h2 className="text-[36px] tracking-tighter lg:text-[64px] font-semibold text-center leading-10 lg:leading-18 ">

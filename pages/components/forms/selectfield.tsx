@@ -44,7 +44,7 @@
   }: SelectProps) {
     return (
       <div className="flex flex-col gap-4">
-        <label className="block text-black">{label}</label>
+        <label className="block text-black text-base lg:text-lg ">{label}</label>
         <select
           name={name}
           value={value}

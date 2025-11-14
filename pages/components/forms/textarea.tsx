@@ -9,7 +9,7 @@ type Props = {
   
   export default function Textarea({ label, name, value, rows, placeholder, onChange }: Props) {
     return (
-      <div className="md:col-span-2">
+      <div className="w-full">
         <label className="block text-black text-base lg:text-lg mb-3 ">{label}</label>
         <textarea
           name={name}

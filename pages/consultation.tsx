@@ -1,13 +1,13 @@
 import Link from "next/link";
-// import ContactForm from "./components/contact/contactform";
-// import ContactInfo from "./components/contact/contactinfo";
 import FAQ from "./components/contact/faq";
 import Navbar from "./components/Navbar";
+import Breadcrumbs from "./components/forms/breadcrumbs";
 
 export default function Consultation() {
   return (
     <>
       <Navbar />
+      <Breadcrumbs />
       <section className="flex flex-col mt-8 mx-auto px-4 lg:px-[120px] xl:px-[154px] ">
         <div className="flex flex-col items-center gap-4">
           <h2 className="text-[36px] lg:text-[64px] tracking-tighter font-semibold text-center leading-18 ">

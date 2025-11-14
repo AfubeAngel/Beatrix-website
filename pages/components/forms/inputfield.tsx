@@ -9,8 +9,8 @@
   
   export default function InputField({ label, name, value, onChange, type = "text", placeholder }: Props) {
     return (
-      <div className="flex flex-col gap-4">
-        <label className="block text-black ">{label}</label>
+      <div className="flex flex-col gap-4 w-full">
+        <label className="block text-black text-base lg:text-lg  ">{label}</label>
         <input
           name={name}
           type={type}
