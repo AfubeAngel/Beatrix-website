@@ -4,7 +4,7 @@ import InputField from "./components/forms/inputfield";
 import Navbar from "./components/Navbar";
 import SelectField from "./components/forms/selectfield";
 import Textarea from "./components/forms/textarea";
-import Link from "next/link";
+// import Link from "next/link";
 
 export default function WomenHealthForm() {
   const [formData, setFormData] = useState({
@@ -79,7 +79,7 @@ export default function WomenHealthForm() {
 
         <form
           onSubmit={handleSubmit}
-          className="max-w-5xl mx-auto text-sm text-gray-800"
+          className="flex flex-col max-w-5xl mx-auto text-sm text-gray-800"
         >
           {/* Personal Information */}
           <h2 className="text-[24px] lg:text-[36px] font-semibold mt-20 lg:mt-[100px] mb-6 lg:mb-10">
@@ -98,14 +98,14 @@ export default function WomenHealthForm() {
               name="surname"
               onChange={handleChange}
               value={formData.surname}
-              placeholder="Surname name"
+              placeholder="Enter your surname"
             />
             <InputField
               label="Email Address"
               name="email"
               onChange={handleChange}
               value={formData.email}
-              placeholder="Email Address"
+              placeholder="Enter your email address"
             />
             <SelectField
               label="How often do you check your e-mail:"
@@ -123,42 +123,42 @@ export default function WomenHealthForm() {
               name="phone"
               onChange={handleChange}
               value={formData.phone}
-              placeholder="Phone number"
+              placeholder="Enter your phone number"
             />
             <InputField
               label="Age"
               name="age"
               onChange={handleChange}
               value={formData.age}
-              placeholder="Age"
+              placeholder="Enter your age"
             />
             <InputField
               label="Height"
               name="height"
               onChange={handleChange}
               value={formData.height}
-              placeholder="Height"
+              placeholder="Enter your height"
             />
             <InputField
               label="Current Weight"
               name="currentWeight"
               onChange={handleChange}
               value={formData.currentWeight}
-              placeholder="Current weight"
+              placeholder="Enter your current weight"
             />
             <InputField
               label="Weight Six months ago"
               name="weightSixMonthsAgo"
               onChange={handleChange}
               value={formData.weightSixMonthsAgo}
-              placeholder="Weight six months ago"
+              placeholder="Enter your weight six months ago"
             />
             <InputField
               label="Weight one year ago"
               name="weightOneYearAgo"
               onChange={handleChange}
               value={formData.weightOneYearAgo}
-              placeholder="Weight one year ago"
+              placeholder="Enter your weight one year ago"
             />
             <SelectField
               label="Would you like your weight to be different?"
@@ -388,26 +388,10 @@ export default function WomenHealthForm() {
             label={"Anything else you would like to share?:"}
           />
 
-          {/* health assessment Cards */}
-          <section className="flex flex-col gap-10 mt-10 lg:mt-20">
-            <div className="flex flex-col gap-5">
-              <div className="bg-gray-100 p-6 rounded-lg shadow-md ">
-                <h3 className="text-xl font-semibold">Men’s Health Form</h3>
-                <p className="text-gray-600 mt-2">
-                  Comprehensive questionnaire covering nutritional needs, health
-                  history, and men-specific wellness
-                </p>
-                <button className="mt-10 bg-primary-main cursor-pointer text-white px-4 py-2 rounded-[10px] hover:bg-green-700">
-                  <Link href="/menhealth">Complete assessment form</Link>
-                </button>
-              </div>
-            </div>
-          </section>
-
           {/* Submit */}
           <button
             type="submit"
-            className="bg-primary-main cursor-pointer text-white px-6 py-2 rounded hover:bg-green-800"
+            className="self-center bg-[#4A7A8C] hover:bg-[#185971] rounded-[8px] w-[336px] cursor-pointer text-white mt-10 px-6 py-2 "
           >
             Submit
           </button>
