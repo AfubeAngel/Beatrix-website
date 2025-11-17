@@ -72,7 +72,7 @@ export default function WomenHealthForm() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Submitted data:", formData);
-    // Submit to API or email here
+    // Submit to API or an email here
   };
 
   return (
