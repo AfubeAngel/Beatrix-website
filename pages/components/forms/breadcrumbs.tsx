@@ -1,53 +1,46 @@
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useNavigationStore } from "@/stores/useNavigationStore";
 import { HiChevronRight } from "react-icons/hi";
 
+const LABELS: Record<string, string> = {
+  "/": "Home",
+  "/about": "About",
+  "/services": "Services",
+  "/blog": "Blog",
+  "/contact": "Contact",
+  "/consultation": "Book A Consultation",
+  "/firstconsultation": "First Time Consultation",
+  "/womenhealth": "Women’s Health History",
+  "/menhealth": "Men’s Health History",
+  "/followup": "Follow-Up Consultation (Revisit)",
+};
+
 export default function Breadcrumbs() {
-  const pathname = usePathname();
+  const previous = useNavigationStore((s) => s.previousRoute);
+  const current = useNavigationStore((s) => s.currentRoute);
 
-  // split path and filter empty items
-  const segments = pathname.split("/").filter(Boolean);
-
-  const formatLabel = (str: string) =>
-    str
-      .replace(/-/g, " ")
-      .replace(/\b\w/g, (c) => c.toUpperCase()); // Capitalize each word
-
-  const buildHref = (index: number) =>
-    "/" + segments.slice(0, index + 1).join("/");
+  // Narrow to a string before using as index
+  const currentLabel = current ? LABELS[current] ?? current : "";
+  const previousLabel = previous && previous !== "/" ? LABELS[previous] ?? previous : "";
 
   return (
     <nav className="flex items-center px-4 lg:px-[120px] space-x-1 text-sm text-gray-500">
-      {/* Home Link */}
-      <Link href="/" className="hover:text-gray-700">
-        Home
-      </Link>
-      {segments.length > 0 && (
-        <HiChevronRight className="mx-1 text-gray-400" />
+      <Link href="/">Home</Link>
+
+      {previous && previous !== "/" && (
+        <>
+          <HiChevronRight className="mx-1 text-gray-400" />
+          <Link href={previous}>{previousLabel}</Link>
+        </>
       )}
 
-      {segments.map((segment, index) => {
-        const isLast = index === segments.length - 1;
-        const href = buildHref(index);
+      <HiChevronRight className="mx-1 text-gray-400" />
 
-        return (
-          <span key={index} className="flex items-center">
-            {!isLast ? (
-              <Link href={href} className="hover:text-gray-700">
-                {formatLabel(segment)}
-              </Link>
-            ) : (
-              <span className="text-[#4A7A8C] font-medium">
-                {formatLabel(segment)}
-              </span>
-            )}
-
-            {!isLast && (
-              <HiChevronRight className="mx-1 text-gray-400" />
-            )}
-          </span>
-        );
-      })}
+      {currentLabel ? (
+        <span className="text-[#4A7A8C] font-medium">{currentLabel}</span>
+      ) : (
+        <span className="text-[#4A7A8C] font-medium">—</span> // optional fallback
+      )}
     </nav>
   );
 }

@@ -76,7 +76,6 @@ export default function MenHealthForm() {
       <Navbar />
       <Breadcrumbs />
       <div className="max-w-7xl mx-auto px-4 py-10 lg:px-[120px] ">
-        <Breadcrumbs/>
         <h1 className="text-[36px] lg:text-[64px] font-bold text-center leading-10 mb-4">
           Men’s Health History
         </h1>
