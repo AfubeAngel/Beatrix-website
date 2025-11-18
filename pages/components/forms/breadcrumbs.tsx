@@ -5,9 +5,8 @@ import { HiChevronRight } from "react-icons/hi";
 const LABELS: Record<string, string> = {
   "/": "Home",
   "/about": "About",
-  "/services": "Services",
+  "/consultationform": "Schedule Your Appointment",
   "/blog": "Blog",
-  "/contact": "Contact",
   "/consultation": "Book A Consultation",
   "/firstconsultation": "First Time Consultation",
   "/womenhealth": "Women’s Health History",

@@ -8,12 +8,12 @@ import Breadcrumbs from "./components/forms/breadcrumbs";
 
 // Define TypeScript Interface for Form Data
 interface ConsultationFormData {
-  fullName: string;
-  email: string;
-  gender: { value: string; label: string } | null;
-  age: string;
-  phone: string;
-  contactMethod: { value: string; label: string } | null;
+  // fullName: string;
+  // email: string;
+  // gender: { value: string; label: string } | null;
+  // age: string;
+  // phone: string;
+  // contactMethod: { value: string; label: string } | null;
   time: { value: string; label: string } | null;
 }
 
@@ -23,7 +23,7 @@ interface OptionType {
 }
 
 export default function Consultation() {
-  const { register, handleSubmit, control } = useForm<ConsultationFormData>();
+  const { handleSubmit, control } = useForm<ConsultationFormData>();
   const [selectedDate, setSelectedDate] = useState<Date | null>(new Date());
 
   const customStyles: StylesConfig<OptionType, false, GroupBase<OptionType>> = {
@@ -45,16 +45,16 @@ export default function Consultation() {
     }),
   };
 
-  const genderOptions = [
-    { value: "male", label: "Male" },
-    { value: "female", label: "Female" },
-    { value: "other", label: "Other" },
-  ];
+  // const genderOptions = [
+  //   { value: "male", label: "Male" },
+  //   { value: "female", label: "Female" },
+  //   { value: "other", label: "Other" },
+  // ];
 
-  const contactMethods = [
-    { value: "email", label: "Email" },
-    { value: "phone", label: "Phone" },
-  ];
+  // const contactMethods = [
+  //   { value: "email", label: "Email" },
+  //   { value: "phone", label: "Phone" },
+  // ];
 
   const timeSlots = [
     "09:00am",
@@ -78,111 +78,49 @@ export default function Consultation() {
       <Breadcrumbs />
       <div className="min-h-screen flex max-w-7xl mx-auto py-10 px-4 lg:px-[150px]">
         <div className="bg-white rounded-lg w-full">
-          <h2 className="text-[36px] lg:text-[64px] font-bold text-center mb-4">
-            First-time Consultation
+          <h2 className="text-[36px] lg:text-[64px] font-bold tracking-tighter leading-10 lg:leading-20 text-center mb-4">
+            Schedule Your Appointment
           </h2>
           <p className="text-gray-500 text-center mb-6">
             Take the first step towards your health transformation with a
             personalized 30-minute consultation.
           </p>
 
-          <form
-            onSubmit={handleSubmit(onSubmit)}
-            className="space-y-4 items-center "
-          >
-            {/* Full Name */}
-            <div className="flex flex-col gap-4">
-              <label className="block text-black">Full Name</label>
-              <input
-                {...register("fullName")}
-                type="text"
-                name="name"
-                className="w-full p-3 border bg-[#F6F6F6] border-[#F6F6F6] rounded-lg"
-                placeholder="Enter your full name"
-                required
-              />
-            </div>
-
-            {/* Email */}
-            <div className="flex flex-col gap-4">
-              <label className="block text-black">Email Address</label>
-              <input
-                {...register("email")}
-                type="email"
-                placeholder="Enter your email"
-                className="w-full p-3 border bg-[#F6F6F6] border-[#F6F6F6] rounded-lg"
-              />
-            </div>
-
-            {/* Gender & Age */}
-            <div className="grid grid-cols-2 gap-4">
-              <div className="flex flex-col gap-4">
-                <label className="block text-gray-700">Gender</label>
-                <Controller
-                  name="gender"
-                  control={control}
-                  render={({ field }) => (
-                    <Select
-                      {...field}
-                      options={genderOptions}
-                      styles={customStyles}
-                      placeholder="Enter your gender"
-                      isClearable
-                    />
-                  )}
-                />
-              </div>
-              <div className="flex flex-col gap-4">
-                <label className="block text-black">Age</label>
-                <input
-                  {...register("age")}
-                  type="number"
-                  placeholder="Enter your age"
-                  className="w-full p-3 border bg-[#F6F6F6] border-[#F6F6F6] rounded-lg"
-                />
-              </div>
-            </div>
-
-            {/* Phone Number & Contact Method */}
-            <div className="grid grid-cols-2 gap-4">
-              <div className="flex flex-col gap-4">
-                <label className="block text-gray-700">Phone Number</label>
-                <input
-                  {...register("phone")}
-                  type="tel"
-                  placeholder="Enter phone number"
-                  className="w-full p-3 border bg-[#F6F6F6] border-[#F6F6F6] rounded-lg"
-                />
-              </div>
-              <div className="flex flex-col gap-4">
-                <label className="block text-gray-700">
-                  Preferred Contact Method
-                </label>
-                <Controller
-                  name="contactMethod"
-                  control={control}
-                  render={({ field }) => (
-                    <Select
-                      {...field}
-                      options={contactMethods}
-                      styles={customStyles}
-                      placeholder="Select method"
-                      isClearable
-                    />
-                  )}
-                />
-              </div>
-            </div>
-
+          <form onSubmit={handleSubmit(onSubmit)} className=" items-center ">
             <div className="mt-10 lg:mt-[100px]">
-              <h3 className="text-2xl lg:text-[36px] font-bold ">
-                Pick Your Consultation Time
-              </h3>
-              <p>
-                Select a date and time that works best for you. Your
-                consultation will be held via Google Meet, and you’ll receive a
-                link after booking
-              </p>
+              <div>
+                <h3 className="text-2xl lg:text-[36px] font-bold ">
+                  Pick Your Consultation Time
+                </h3>
+                <p>
+                  Select a date and time that works best for you. Your
+                  consultation will be held via
+                </p>
+                <span>
+                  Google Meet, and you’ll receive a link after booking
+                </span>
+              </div>
+
+              <hr className="my-10 text-[#E7E4E3]" />
+
+              <div>
+                <h3 className="text-2xl lg:text-[36px] font-bold ">
+                  Available Hours
+                </h3>
+                <div className="flex flex-col lg:flex-row gap-2 lg:gap-15">
+                  <div className="flex lg:flex-col gap-2">
+                    <p>Monday & Friday</p>
+                    <p>10:00 AM - 3:00 PM</p>
+                  </div>
+                  <div className="flex lg:flex-col gap-2">
+                    <p>Tuesday & Thursday</p>
+                    <p>10:00 AM - 2:30 PM</p>
+                  </div>
+                </div>
+              </div>
+
+              <hr className="my-10 text-[#E7E4E3]" />
+
               <div className="grid grid-cols-2 gap-4 mt-10">
                 {/* Date Picker */}
                 {/* <div className="w-full flex flex-col gap-4">
@@ -207,28 +145,31 @@ export default function Consultation() {
                     popperClassName="!z-50"
                   />
                 </div> */}
-<div className="w-full flex flex-col gap-4">
-  <label className="block text-gray-700 font-medium">
-    Select Preferred Date
-  </label>
-  <DatePicker
-    selected={selectedDate}
-    onChange={(date) => setSelectedDate(date)}
-    dateFormat="MMMM d, yyyy"
-    placeholderText="Select date"
-    className="w-full px-4 py-3 bg-[#F6F6F6] border border-[#F6F6F6] rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-main"
-    calendarClassName="!w-[420px] bg-white shadow-xl p-6 rounded-2xl border border-gray-100"
-    dayClassName={(date) =>
-      `text-gray-700 text-sm font-medium hover:bg-primary-light transition-all duration-200
+                
+                <div className="w-full flex flex-col gap-4">
+                  <label className="block text-gray-700 font-medium">
+                    Select Preferred Date
+                  </label>
+                  <DatePicker
+                    selected={selectedDate}
+                    onChange={(date) => setSelectedDate(date)}
+                    dateFormat="MMMM d, yyyy"
+                    placeholderText="Select date"
+                    className="w-full px-4 py-3 bg-[#F6F6F6] border border-[#F6F6F6] rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-main"
+                    calendarClassName="!w-[420px] bg-white shadow-xl p-6 rounded-2xl border border-gray-100"
+                    dayClassName={(date) =>
+                      `text-gray-700 text-sm font-medium hover:bg-primary-light transition-all duration-200
        w-12 h-12 rounded-full flex items-center justify-center
-       ${selectedDate?.toDateString() === date.toDateString() ? "bg-primary-main text-white" : ""}`
-    }
-    popperPlacement="bottom-start"
-    popperClassName="!z-50"
-  />
-</div>
-
-
+       ${
+         selectedDate?.toDateString() === date.toDateString()
+           ? "bg-primary-main text-white"
+           : ""
+       }`
+                    }
+                    popperPlacement="bottom-start"
+                    popperClassName="!z-50"
+                  />
+                </div>
 
                 {/* Time Selection */}
                 <div className="flex flex-col gap-4">
