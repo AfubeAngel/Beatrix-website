@@ -3,6 +3,7 @@ import Splide from "@splidejs/splide";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import "@splidejs/splide/css";
 import Image from "next/image";
+import Link from "next/link";
 
 const offers = [
   {
@@ -65,9 +66,11 @@ export default function Offer() {
                 regaining a sense of purpose.
               </p>
             </div>
+            <Link href="/consultation">
             <button className="hidden cursor-pointer lg:block bg-[#4A7A8C] hover:bg-[#185971] text-white px-6 py-3 w-[302px] h-14 rounded-2xl">
               Start Your Wellness Journey
             </button>
+            </Link>
           </div>
 
           {/* Desktop Grid View */}

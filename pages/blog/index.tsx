@@ -1,72 +1,8 @@
 import Image from "next/image";
 import Navbar from "../components/Navbar";
 import Link from "next/link";
+import blogPosts from "./data/blogData";
 
-const blogPosts = [
-  {
-    title: "Integrative Nutrition: A New Way of Life",
-    description:
-      "Integrative nutrition combines the principles of traditional nutrition guidelines and functional nutrition",
-    image: "/placeholder.png", 
-    link: "#",
-  },
-  {
-    title: "How to Successfully Navigate Parties",
-    description:
-      "Integrative nutrition combines the principles of traditional nutrition guidelines and functional nutrition",
-    image: "/blogimg.png",
-    link: "#",
-  },
-  {
-    title: "Truth Behind Health and Wellness Myths",
-    description:
-      "Integrative nutrition combines the principles of traditional nutrition guidelines and functional nutrition",
-    image: "/placeholder.png",
-    link: "#",
-  },
-  {
-    title: "Nutrition & Healthy Eating Foods",
-    description:
-      "Integrative nutrition combines the principles of traditional nutrition guidelines and functional nutrition",
-    image: "/blogimg.png",
-    link: "#",
-  },
-  {
-    title: "Women’s Health & Hormonal Balance",
-    description:
-      "Integrative nutrition combines the principles of traditional nutrition guidelines and functional nutrition",
-    image: "/placeholder.png",
-    link: "#",
-  },
-  {
-    title: "Mindfulness & Mental Health",
-    description:
-      "Integrative nutrition combines the principles of traditional nutrition guidelines and functional nutrition",
-    image: "/blogimg.png",
-    link: "#",
-  },
-  {
-    title: "Health Coaching & Personal Growth",
-    description:
-      "Integrative nutrition combines the principles of traditional nutrition guidelines and functional nutrition",
-    image: "/placeholder.png",
-    link: "#",
-  },
-  {
-    title: "Meal Prep for a Stress-Free Week",
-    description:
-      "Integrative nutrition combines the principles of traditional nutrition guidelines and functional nutrition",
-    image: "/blogimg.png",
-    link: "#",
-  },
-  {
-    title: "How to Enjoy Food Without Guilt",
-    description:
-      "Integrative nutrition combines the principles of traditional nutrition guidelines and functional nutrition",
-    image: "/blogimg.png",
-    link: "#",
-  },
-];
 
 export default function BlogPage() {
   return (
