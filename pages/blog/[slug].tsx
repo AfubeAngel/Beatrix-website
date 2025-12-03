@@ -37,11 +37,11 @@ export default function BlogPostPage() {
         </div>
 
         {/* Horizontal Line */}
-        <hr className="my-6 lg:mt-[100px] lg:mb-6 border-gray-300" />
+        <hr className="my-6 lg:mt-20 lg:mb-6 border-gray-300" />
 
         {/* Like, Comment, Share */}
-        <div className="flex items-center justify-between px-4 lg:pl-50 max-w-7xl">
-          <div className="flex gap-6 text-[#5D5D5D] text-sm mx-auto">
+        <div className="flex items-center justify-between px-4 lg:px-40 ">
+          <div className="flex gap-6 text-[#5D5D5D] text-sm">
             <div className="flex items-center gap-2">
               <FaHeart />
               <span>{post.likes}</span>
