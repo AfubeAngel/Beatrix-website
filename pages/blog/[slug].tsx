@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import blogPosts from "./data/blogData";
+import blogPosts from "../../data/blogData";
 import Image from "next/image";
 import Navbar from "../components/Navbar";
 import { PiCalendarBlank } from "react-icons/pi";
