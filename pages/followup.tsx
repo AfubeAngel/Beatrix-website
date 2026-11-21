@@ -85,7 +85,7 @@ export default function FollowUpConsultation() {
   ];
 
   // Form Submission
-  const onSubmit = async (data: FollowUpFormData) => {
+  const onSubmit = async () => {
     setLoading(true);
 
     // Simulate sending form data to backend
