@@ -67,7 +67,6 @@ export default function MenHealthForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Submitted data:", formData);
     // Submit to API or email here
   };
 

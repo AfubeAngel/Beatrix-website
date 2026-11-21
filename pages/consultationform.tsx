@@ -29,11 +29,7 @@ export default function Consultation() {
     if (time) setValue("time", time);
   }, [time, setValue]);
 
-  const onSubmit: SubmitHandler<ConsultationFormData> = (data) => {
-    console.log("Form Data:", data);
-    // data.date = "2025-12-03T..." (ISO string)
-    // data.time = "10:00am"
-  };
+  const onSubmit: SubmitHandler<ConsultationFormData> = () => undefined;
 
   return (
     <>

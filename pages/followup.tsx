@@ -90,7 +90,6 @@ export default function FollowUpConsultation() {
 
     // Simulate sending form data to backend
     setTimeout(() => {
-      console.log("Form Data Submitted:", data);
       setLoading(false);
       alert("Your follow-up consultation request has been submitted.");
     }, 2000);

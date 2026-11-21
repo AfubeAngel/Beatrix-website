@@ -370,9 +370,10 @@ confidential intake workflow.
 ### Men’s and women’s health history
 
 `pages/menhealth.tsx` and `pages/womenhealth.tsx` maintain all entered values in
-local React state. On submit, each prevents normal form submission and writes
-the object to the browser console; there is no API call, email, confirmation,
-or storage. Most fields are not marked required by the rendered controls.
+local React state. On submit, each prevents normal form submission; there is no
+API call, email, confirmation, or storage. Values are not intentionally logged
+to the browser console. Most fields are not marked required by the rendered
+controls.
 
 Both assessments collect the following groups:
 
@@ -405,9 +406,9 @@ alter medical questions without owner approval.
 positive changes since the last session, main concerns, weight changes, sleep,
 digestion, mood, cooking changes, and additional comments.
 
-Submission currently waits two seconds, logs values in the browser, then shows
-a browser alert that the request was submitted. It does not make a network
-request. The gender `react-select` is not wired into React Hook Form. The
+Submission currently waits two seconds, then shows a browser alert that the
+request was submitted. It does not make a network request or intentionally log
+values. The gender `react-select` is not wired into React Hook Form. The
 additional-comments textarea is registered as `positiveChanges`, overwriting
 that answer. Correct these bindings as part of the backend/form contract work;
 the browser's visible success message must only be shown after the real
@@ -416,9 +417,9 @@ service confirms receipt.
 ### Appointment selection form
 
 `/consultationform` is a separate date/time selection page. It initializes date
-to the current date and time to `10:00am`, updates date/time into React Hook
-Form state, and only logs the values on submit. It does not create a booking or
-check calendar availability. Its UI says that a Google Meet link will be sent,
+to the current date and time to `10:00am`, and updates date/time into React Hook
+Form state. Submit does not create a booking or save the selected values, and
+the form does not check calendar availability. Its UI says that a Google Meet link will be sent,
 but no Google Meet or calendar integration is present in this repository.
 Confirm whether this page is the intended destination for assessment
 submissions and wire it to the approved booking system if required.
