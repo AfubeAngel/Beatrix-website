@@ -66,7 +66,7 @@ Available package scripts:
 
 There is a committed `package-lock.json`; use `npm ci` to install its locked
 dependency tree. There are no test scripts in `package.json`. The project uses
-Next.js 15.2.1, React 19, TypeScript 5, Tailwind CSS 4, React Hook Form,
+Next.js 15.5.29, React 19, TypeScript 5, Tailwind CSS 4, React Hook Form,
 React Select, Day.js, MUI date picker packages, Splide, and Zustand.
 
 No environment-variable template, deployment workflow, hosting configuration,
@@ -156,6 +156,11 @@ flowchart TD
 The primary navigation exposes Home, About, Blog, and Contact. The Contact
 button in the navbar routes to `/contact`; other consultation links appear in
 page CTAs and the consultation selection flow.
+
+**Pages Router note:** Next.js also treats files under `pages/components/` as
+routes. The current production build emits `/components/...` URLs for those
+component files. If these are not intended public pages, move shared components
+outside `pages/` and verify the route inventory after the change.
 
 ## 5. Brand identity, logo, and assets
 
@@ -443,6 +448,31 @@ Use server-side validation, transport encryption, least-privilege access, and
 service credentials stored in deployment secrets. Avoid logging submitted
 health data. Conduct a real end-to-end test with synthetic data before
 launch; never test with a real client's health history.
+
+### Security review and changes (21 November 2026)
+
+A repository security review identified the previously locked Next.js 15.2.1
+as affected by critical advisories and found health/form values written to
+browser-console logs. The framework and matching lint config were updated to
+15.5.29, and form-data console logging was removed from the men’s, women’s,
+follow-up, and appointment-selection submission handlers. This does not connect
+any form to a secure backend or make the forms suitable for collecting real
+health data.
+
+After those changes, `npm audit` reported zero critical vulnerabilities, but
+still reported 14 findings across the full dependency tree (8 high, 4 moderate,
+2 low). `npm audit --omit=dev` reported five production dependency findings
+(3 high, 2 moderate), involving `nanoid`, `postcss` (including Next.js’s
+dependency tree), `source-map-js`, `yaml`, and Next.js through PostCSS. The
+audit proposed Next.js 16.4.6 to resolve the remaining Next/PostCSS chain, a
+major-version upgrade from the current Next.js 15 line; plan and regression-test
+that upgrade before production release. Re-run the audit at handover/release
+because advisory data changes over time.
+
+Validation after the selected fixes: `npm run build` and `npm run lint` passed.
+The build emitted a local environment warning because it detected an additional
+lockfile at `C:\Users\PC\package-lock.json`; confirm CI/deployment workspace
+root configuration separately.
 
 ## 10. Design, navigation, and shared UI notes
 

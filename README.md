@@ -23,4 +23,5 @@ npm run lint
 
 See [HANDOVER.md](./HANDOVER.md) for the architecture, route and content
 inventory, brand assets, FAQ copy, CMS direction, form behavior, deployment
-notes, and prioritized handover actions.
+notes, security status, and prioritized handover actions. The owner-facing
+overview is in [OWNER_PROJECT_SUMMARY.docx](./OWNER_PROJECT_SUMMARY.docx).
